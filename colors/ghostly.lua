@@ -248,7 +248,7 @@ colorscheme.highlight_all {
 	Italic = { italic = true },
 	Normal = { fg = white },
 	Title = 'Bold',
-	Underlined = { fg = turqoise, underline = true },
+	Underlined = { fg = white, underline = true },
 	Whitespace = 'NonText',
 
 	-- "Non"-text
@@ -261,8 +261,8 @@ colorscheme.highlight_all {
 	Constant = { fg = ice },
 	String = { fg = blue },
 	Character = { fg = blue },
-	Number = { fg = ice },
-	Boolean = { fg = ice },
+	Number = { fg = white },
+	Boolean = { fg = red_light },
 	Float = 'Number',
 
 	-- Syntax
@@ -323,6 +323,11 @@ colorscheme.highlight_all {
 	['@text.literal'] = 'mkdCode',
 	['@text.uri'] = 'Underlined',
 	['@text.warning'] = 'WarningMsg',
+	['@variable'] = 'Normal',
+	['@field'] = 'Normal',
+	['@punctuation.braces'] = 'Normal',
+	['@punctuation.bracket'] = 'Normal',
+	['@punctuation.delimiter'] = 'Normal',
 
 	--[[ Editor UI ]]
 
@@ -538,11 +543,11 @@ colorscheme.highlight_all {
 	goBlock = 'Delimiter',
 	goBoolean = 'Boolean',
 	goBuiltins = 'Function',
-	goField = 'Identifier',
+	goField = 'Normal',
 	goFloat = 'Float',
 	goFormatSpecifier = 'Character',
-	goFunction = 'Function',
-	goFunctionCall = 'goFunction',
+	goFunction = 'Normal',
+	goFunctionCall = 'Function',
 	goFunctionReturn = {},
 	goImport = 'Include',
 	goMethodCall = 'goFunctionCall',
