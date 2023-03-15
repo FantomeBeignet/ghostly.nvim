@@ -81,39 +81,39 @@ emulator. Type errors in the definition will show up as LSP diagnostics.
 
 NOTE: |Replace-mode| will probably be useful here.
 ]]
-local black        = { '#2d2040', 235, 'black' }     --- @type ghostly.color.definition
-local gray         = { '#3b3d54', 244, 'gray' }      --- @type ghostly.color.definition
-local gray_dark    = { '#38364e', 236, 'darkgrey' }  --- @type ghostly.color.definition
-local gray_darker  = { '#323045', 239, 'gray' }      --- @type ghostly.color.definition
-local gray_light   = { '#4f4c6b', 250, 'gray' }      --- @type ghostly.color.definition
-local white        = { '#e2e1ea', 231, 'white' }     --- @type ghostly.color.definition
+local black        = { '#261b36', 235, 'black' }       --- @type ghostly.color.definition
+local gray         = { '#67587e', 244, 'gray' }        --- @type ghostly.color.definition
+local gray_dark    = { '#43335b', 236, 'darkgrey' }    --- @type ghostly.color.definition
+local gray_darker  = { '#392951', 239, 'gray' }        --- @type ghostly.color.definition
+local gray_light   = { '#76678e', 250, 'gray' }        --- @type ghostly.color.definition
+local white        = { '#e2e1ea', 231, 'white' }       --- @type ghostly.color.definition
 
-local tan          = { '#f4c069', 221, 'yellow' }    --- @type ghostly.color.definition
+local tan          = { '#f4c069', 221, 'yellow' }      --- @type ghostly.color.definition
 
-local red          = { '#d08092', 203, 'red' }       --- @type ghostly.color.definition
-local red_dark     = { '#cc7588', 124, 'darkred' }   --- @type ghostly.color.definition
-local red_light    = { '#d897a5', 205, 'red' }       --- @type ghostly.color.definition
+local red          = { '#d08092', 203, 'red' }         --- @type ghostly.color.definition
+local red_dark     = { '#cc7588', 124, 'darkred' }     --- @type ghostly.color.definition
+local red_light    = { '#d897a5', 205, 'red' }         --- @type ghostly.color.definition
 
-local orange       = { '#e5aa8a', 208, 'darkyellow' } --- @type ghostly.color.definition
-local orange_light = { '#09b69b', 214, 'darkyellow' } --- @type ghostly.color.definition
+local orange       = { '#e5aa8a', 208, 'darkyellow' }  --- @type ghostly.color.definition
+local orange_light = { '#09b69b', 214, 'darkyellow' }  --- @type ghostly.color.definition
 
-local yellow       = { '#dacd8b', 227, 'yellow' }    --- @type ghostly.color.definition
+local yellow       = { '#dacd8b', 227, 'yellow' }      --- @type ghostly.color.definition
 
-local green_dark   = { '#89be9d', 113, 'darkgreen' } --- @type ghostly.color.definition
-local green        = { '#99c7ab', 46, 'green' }      --- @type ghostly.color.definition
-local green_light  = { '#a6ceb5', 120, 'green' }     --- @type ghostly.color.definition
-local turqoise     = { '#87c3bf', 48, 'green' }      --- @type ghostly.color.definition
+local green_dark   = { '#89be9d', 113, 'darkgreen' }   --- @type ghostly.color.definition
+local green        = { '#99c7ab', 46, 'green' }        --- @type ghostly.color.definition
+local green_light  = { '#a6ceb5', 120, 'green' }       --- @type ghostly.color.definition
+local turqoise     = { '#87c3bf', 48, 'green' }        --- @type ghostly.color.definition
 
-local blue         = { '#829cd3', 63, 'darkblue' }   --- @type ghostly.color.definition
-local cyan         = { '#80bfd1', 80, 'cyan' }       --- @type ghostly.color.definition
-local ice          = { '#92a8d9', 111, 'cyan' }      --- @type ghostly.color.definition
-local teal         = { '#90c5b5', 75, 'blue' }       --- @type ghostly.color.definition
+local blue         = { '#829cd3', 63, 'darkblue' }     --- @type ghostly.color.definition
+local cyan         = { '#80bfd1', 80, 'cyan' }         --- @type ghostly.color.definition
+local ice          = { '#92a8d9', 111, 'cyan' }        --- @type ghostly.color.definition
+local teal         = { '#90c5b5', 75, 'blue' }         --- @type ghostly.color.definition
 
-local magenta      = { '#b08cc5', 168, 'magenta' }   --- @type ghostly.color.definition
+local magenta      = { '#b08cc5', 168, 'magenta' }     --- @type ghostly.color.definition
 local magenta_dark = { '#ab85c1', 126, 'darkmagenta' } --- @type ghostly.color.definition
-local pink         = { '#d9b1be', 219, 'magenta' }   --- @type ghostly.color.definition
-local pink_light   = { '#ddbbc6', 217, 'white' }     --- @type ghostly.color.definition
-local purple       = { '#b678c4', 171, 'magenta' }   --- @type ghostly.color.definition
+local pink         = { '#d9b1be', 219, 'magenta' }     --- @type ghostly.color.definition
+local pink_light   = { '#ddbbc6', 217, 'white' }       --- @type ghostly.color.definition
+local purple       = { '#b678c4', 171, 'magenta' }     --- @type ghostly.color.definition
 local purple_light = { '#c28ecd', 133, 'darkmagenta' } --- @type ghostly.color.definition
 
 --[[ Step 4: highlights
@@ -246,7 +246,7 @@ colorscheme.highlight_all {
 	-- Basic styles
 	Bold = { bold = true },
 	Italic = { italic = true },
-	Normal = { fg = gray_light },
+	Normal = { fg = white },
 	Title = 'Bold',
 	Underlined = { fg = turqoise, underline = true },
 	Whitespace = 'NonText',
@@ -255,28 +255,28 @@ colorscheme.highlight_all {
 	Conceal = 'NonText',
 	EndOfBuffer = 'NonText',
 	Ignore = { fg = gray },
-	NonText = { fg = gray_darker },
+	NonText = { fg = gray_dark },
 
 	-- Literals
-	Constant = { fg = orange_light },
-	String = { fg = green_dark },
-	Character = { fg = red_light },
-	Number = { fg = pink_light },
-	Boolean = { fg = yellow },
+	Constant = { fg = ice },
+	String = { fg = blue },
+	Character = { fg = blue },
+	Number = { fg = ice },
+	Boolean = { fg = ice },
 	Float = 'Number',
 
 	-- Syntax
-	Comment = { fg = gray, italic = true },
+	Comment = { fg = gray_light, italic = true },
 	Conditional = { fg = ice, italic = true },
 	Debug = 'WarningMsg',
-	Delimiter = { fg = white },
-	Exception = { fg = red_light, bold = true },
+	Delimiter = 'Normal',
+	Exception = { fg = red, bold = true },
 	Function = { fg = purple },
-	Identifier = function(self) return { fg = self.Normal.fg } end,
-	Keyword = { fg = teal },
+	Identifier = 'Normal',
+	Keyword = { fg = magenta_dark },
 	Label = { fg = pink, bold = true },
 	Noise = 'Delimiter',
-	Operator = { fg = green, bold = true },
+	Operator = 'Normal',
 	Repeat = { fg = turqoise, italic = true },
 	Statement = { fg = ice },
 	StorageClass = { fg = orange_light, bold = true },
@@ -384,7 +384,7 @@ colorscheme.highlight_all {
 	Error = { fg = white, bg = red_dark, bold = true },
 	ErrorMsg = { fg = red, bold = true },
 	ModeMsg = { fg = yellow },
-	Question = { fg = orange_light, underline = true },
+	Question = { fg = blue, underline = true },
 	Todo = { fg = black, bg = cyan, bold = true },
 	WarningMsg = { fg = orange, bold = true },
 
@@ -404,13 +404,13 @@ colorscheme.highlight_all {
 	DiagnosticFloatingHint = { fg = magenta, italic = true },
 	DiagnosticSignHint = 'DiagnosticFloatingHint',
 
-	DiagnosticInfo = { fg = black, bg = pink_light, bold = true },
-	DiagnosticFloatingInfo = { fg = pink_light, italic = true },
+	DiagnosticInfo = { fg = black, bg = blue, bold = true },
+	DiagnosticFloatingInfo = { fg = blue, italic = true },
 	DiagnosticSignInfo = 'DiagnosticFloatingInfo',
 
 	DiagnosticUnderlineError = { sp = red, undercurl = true },
 	DiagnosticUnderlineHint = { sp = magenta, undercurl = true },
-	DiagnosticUnderlineInfo = { sp = pink_light, undercurl = true },
+	DiagnosticUnderlineInfo = { sp = blue, undercurl = true },
 	DiagnosticUnderlineWarn = { sp = orange, undercurl = true },
 
 	-- Cursor
@@ -659,7 +659,7 @@ colorscheme.highlight_all {
 	['@lsp.typemod.function.declaration.lua'] = '@lsp.type.function',
 	['@lsp.typemod.variable.defaultLibrary.lua'] = '@lsp.type.class.lua',
 	['@lsp.typemod.variable.definition.lua'] = '@punctuation',
-	luaBraces = 'Structure',
+	luaBraces = 'Delimiter',
 	luaBrackets = 'Delimiter',
 	luaBuiltin = 'Keyword',
 	luaComma = 'Delimiter',
@@ -1082,18 +1082,60 @@ colorscheme.highlight_all {
 	TodoFgTODO = function(self) return { fg = self.Todo.bg, italic = true } end,
 	TodoFgWARN = function(self) return { fg = self.WarningMsg.fg } end,
 
-	TodoBgFIX = function(self) return { fg = black, bg = self.TodoFgFIX.fg, bold = true, italic = true,
-			nocombine = true } end,
-	TodoBgHACK = function(self) return { fg = black, bg = self.TodoFgHACK.fg, bold = true, italic = true,
-			nocombine = true } end,
-	TodoBgNOTE = function(self) return { fg = black, bg = self.TodoFgNOTE.fg, bold = true, italic = true,
-			nocombine = true } end,
-	TodoBgPERF = function(self) return { fg = black, bg = self.TodoFgPERF.fg, bold = true, italic = true,
-			nocombine = true } end,
-	TodoBgTODO = function(self) return { fg = black, bg = self.TodoFgTODO.fg, bold = true, italic = true,
-			nocombine = true } end,
-	TodoBgWARN = function(self) return { fg = black, bg = self.TodoFgWARN.fg, bold = true, italic = true,
-			nocombine = true } end,
+	TodoBgFIX = function(self)
+		return {
+			fg = black,
+			bg = self.TodoFgFIX.fg,
+			bold = true,
+			italic = true,
+			nocombine = true
+		}
+	end,
+	TodoBgHACK = function(self)
+		return {
+			fg = black,
+			bg = self.TodoFgHACK.fg,
+			bold = true,
+			italic = true,
+			nocombine = true
+		}
+	end,
+	TodoBgNOTE = function(self)
+		return {
+			fg = black,
+			bg = self.TodoFgNOTE.fg,
+			bold = true,
+			italic = true,
+			nocombine = true
+		}
+	end,
+	TodoBgPERF = function(self)
+		return {
+			fg = black,
+			bg = self.TodoFgPERF.fg,
+			bold = true,
+			italic = true,
+			nocombine = true
+		}
+	end,
+	TodoBgTODO = function(self)
+		return {
+			fg = black,
+			bg = self.TodoFgTODO.fg,
+			bold = true,
+			italic = true,
+			nocombine = true
+		}
+	end,
+	TodoBgWARN = function(self)
+		return {
+			fg = black,
+			bg = self.TodoFgWARN.fg,
+			bold = true,
+			italic = true,
+			nocombine = true
+		}
+	end,
 
 	TodoSignFIX = 'TodoFgFIX',
 	TodoSignHACK = 'TodoFgHACK',
@@ -1172,11 +1214,11 @@ colorscheme.highlight_all {
 ]]
 colorscheme.highlight_terminal {
 	[1] = black,
-	[2] = red_dark,
-	[3] = green_dark,
+	[2] = red,
+	[3] = green,
 	[4] = orange,
 	[5] = blue,
-	[6] = magenta_dark,
+	[6] = magenta,
 	[7] = teal,
 	[8] = gray,
 	[9] = gray_dark,
