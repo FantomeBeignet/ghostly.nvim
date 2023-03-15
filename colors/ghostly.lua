@@ -2,7 +2,7 @@
 
 --[[ Highlite, a Neovim colorscheme template.
 * Author:     Iron-E (https://github.com/Iron-E)
-* Repository: https://github.com/nvim-highlite
+* Repository: https://github.com/nvim-ghostly
 
 Initially forked from vim-rnb, a Vim colorsheme template:
 * Author:        Romain Lafourcade (https://github.com/romainl)
@@ -41,9 +41,9 @@ filenames so make sure your filename doesn't have any whitespace character.
 
 Rename the following files:
 
-* `colors/highlite.lua` → `colors/<your_colorscheme>.lua`
-* `lua/highlite.lua` → `lua/<your_colorscheme>.lua`
-* `lua/highlite/colors.lua` → `lua/<your_colorscheme>/colors.lua`
+* `colors/ghostly.lua` → `colors/<your_colorscheme>.lua`
+* `lua/ghostly.lua` → `lua/<your_colorscheme>.lua`
+* `lua/ghostly/colors.lua` → `lua/<your_colorscheme>/colors.lua`
 
 NOTE: If you are on a Unix-based system (or have WSL on Windows) you can use the setup script at the root of this repo.
 	   See the README for more details.
@@ -58,7 +58,7 @@ In this step you will define information that helps Neovim process:
 ]]
 
 -- This is the name of your colorscheme which will be used as per |g:colors_name|.
-local colorscheme_name = 'highlite'
+local colorscheme_name = 'ghostly'
 
 -- WARN: users shouldn't touch this.
 vim.api.nvim_set_var('colors_name', colorscheme_name)
@@ -87,40 +87,40 @@ emulator. Type errors in the definition will show up as LSP diagnostics.
 NOTE: |Replace-mode| will probably be useful here.
 ]]
 
-local black       = {'#202020', 235, 'black'} --- @type highlite.color.definition
-local gray        = {'#808080', 244, 'gray'} --- @type highlite.color.definition
-local gray_dark   = {'#353535', 236, 'darkgrey'} --- @type highlite.color.definition
-local gray_darker = {'#505050', 239, 'gray'} --- @type highlite.color.definition
-local gray_light  = {'#c0c0c0', 250, 'gray'} --- @type highlite.color.definition
-local white       = {'#ffffff', 231, 'white'} --- @type highlite.color.definition
+local black       = {'#202020', 235, 'black'} --- @type ghostly.color.definition
+local gray        = {'#808080', 244, 'gray'} --- @type ghostly.color.definition
+local gray_dark   = {'#353535', 236, 'darkgrey'} --- @type ghostly.color.definition
+local gray_darker = {'#505050', 239, 'gray'} --- @type ghostly.color.definition
+local gray_light  = {'#c0c0c0', 250, 'gray'} --- @type ghostly.color.definition
+local white       = {'#ffffff', 231, 'white'} --- @type ghostly.color.definition
 
-local tan = {'#f4c069', 221, 'yellow'} --- @type highlite.color.definition
+local tan = {'#f4c069', 221, 'yellow'} --- @type ghostly.color.definition
 
-local red       = {'#ee4a59', 203, 'red'} --- @type highlite.color.definition
-local red_dark  = {'#a80000', 124, 'darkred'} --- @type highlite.color.definition
-local red_light = {'#ff4090', 205, 'red'} --- @type highlite.color.definition
+local red       = {'#ee4a59', 203, 'red'} --- @type ghostly.color.definition
+local red_dark  = {'#a80000', 124, 'darkred'} --- @type ghostly.color.definition
+local red_light = {'#ff4090', 205, 'red'} --- @type ghostly.color.definition
 
-local orange       = {'#ff8900', 208, 'darkyellow'} --- @type highlite.color.definition
-local orange_light = {'#f0af00', 214, 'darkyellow'} --- @type highlite.color.definition
+local orange       = {'#ff8900', 208, 'darkyellow'} --- @type ghostly.color.definition
+local orange_light = {'#f0af00', 214, 'darkyellow'} --- @type ghostly.color.definition
 
-local yellow = {'#f0df33', 227, 'yellow'} --- @type highlite.color.definition
+local yellow = {'#f0df33', 227, 'yellow'} --- @type ghostly.color.definition
 
-local green_dark  = {'#70d533', 113, 'darkgreen'} --- @type highlite.color.definition
-local green       = {'#22ff22', 46,  'green'} --- @type highlite.color.definition
-local green_light = {'#99ff99', 120, 'green'} --- @type highlite.color.definition
-local turqoise    = {'#2bff99', 48,  'green'} --- @type highlite.color.definition
+local green_dark  = {'#70d533', 113, 'darkgreen'} --- @type ghostly.color.definition
+local green       = {'#22ff22', 46,  'green'} --- @type ghostly.color.definition
+local green_light = {'#99ff99', 120, 'green'} --- @type ghostly.color.definition
+local turqoise    = {'#2bff99', 48,  'green'} --- @type ghostly.color.definition
 
-local blue = {'#7766ff', 63,  'darkblue'} --- @type highlite.color.definition
-local cyan = {'#33dbc3', 80,  'cyan'} --- @type highlite.color.definition
-local ice  = {'#95c5ff', 111, 'cyan'} --- @type highlite.color.definition
-local teal = {'#60afff', 75,  'blue'} --- @type highlite.color.definition
+local blue = {'#7766ff', 63,  'darkblue'} --- @type ghostly.color.definition
+local cyan = {'#33dbc3', 80,  'cyan'} --- @type ghostly.color.definition
+local ice  = {'#95c5ff', 111, 'cyan'} --- @type ghostly.color.definition
+local teal = {'#60afff', 75,  'blue'} --- @type ghostly.color.definition
 
-local magenta      = {'#d5508f', 168, 'magenta'} --- @type highlite.color.definition
-local magenta_dark = {'#bb0099', 126, 'darkmagenta'} --- @type highlite.color.definition
-local pink         = {'#ffa6ff', 219, 'magenta'} --- @type highlite.color.definition
-local pink_light   = {'#ffb7b7', 217, 'white'} --- @type highlite.color.definition
-local purple       = {'#cf55f0', 171, 'magenta'} --- @type highlite.color.definition
-local purple_light = {'#af60af', 133, 'darkmagenta'} --- @type highlite.color.definition
+local magenta      = {'#d5508f', 168, 'magenta'} --- @type ghostly.color.definition
+local magenta_dark = {'#bb0099', 126, 'darkmagenta'} --- @type ghostly.color.definition
+local pink         = {'#ffa6ff', 219, 'magenta'} --- @type ghostly.color.definition
+local pink_light   = {'#ffb7b7', 217, 'white'} --- @type ghostly.color.definition
+local purple       = {'#cf55f0', 171, 'magenta'} --- @type ghostly.color.definition
+local purple_light = {'#af60af', 133, 'darkmagenta'} --- @type ghostly.color.definition
 
 --[[ Step 4: highlights
 You can define highlight groups like this:
@@ -158,7 +158,7 @@ You can define highlight groups like this:
 You can also link one highlight group to another, using whatever style you prefer:
 
 ```lua
-<highlight group name> = '<highlight group name>' -- highlite style
+<highlight group name> = '<highlight group name>' -- ghostly style
 <highlight group name> = {link = '<highlight group name>'} -- nvim API style
 ```
 ____________________________________________________________________________
@@ -227,7 +227,7 @@ SpellBad = function(self)
 end
 ```
 
-The function will be executed by |highlite| and transformed into the
+The function will be executed by |ghostly| and transformed into the
 expected result.
 ____________________________________________________________________________
 
@@ -1194,7 +1194,7 @@ colorscheme.highlight_terminal {
 --[[ Step 5: Sourcing
 	When you wish to load your colorscheme, simply add this folder with a plugin manager
 	and then use `colorscheme <your colorscheme name>`. For example, in my configuration,
-	I source highlite by using `colorscheme highlite`.
+	I source ghostly by using `colorscheme ghostly`.
 
 	These online resources can help you design your colorscheme:
 

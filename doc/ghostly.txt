@@ -1,55 +1,55 @@
-*highlite.txt*        Plugin for maintaining colorschemes
-*highlite*
+*ghostly.txt*        Plugin for maintaining colorschemes
+*ghostly*
 
 Author: Iron-E – https://github.com/Iron-E & https://gitlab.com/Iron_E
-Web: https://github.com/Iron-E/nvim-highlite
+Web: https://github.com/Iron-E/nvim-ghostly
 
-|highlite| is a plugin for creating and maintaining colorschemes. It can
+|ghostly| is a plugin for creating and maintaining colorschemes. It can
 be configured by cloning the repository and following the README, or
 individually used to comprehensively highlight groups with its functions.
 
 ==============================================================================
-TABLE OF CONTENTS                                                 *highlite-toc*
+TABLE OF CONTENTS                                                 *ghostly-toc*
 
-1. Requirements ............ |highlite-requirements|
-2. Usage ................... |highlite-usage|
-3. FAQ ..................... |highlite-faq|
+1. Requirements ............ |ghostly-requirements|
+2. Usage ................... |ghostly-usage|
+3. FAQ ..................... |ghostly-faq|
 
 ==============================================================================
-REQUIREMENTS                                          *highlite-requirements*
+REQUIREMENTS                                          *ghostly-requirements*
 
 - Neovim 0.7+
 
 ==============================================================================
-USAGE                                                           *highlite-usage*
+USAGE                                                           *ghostly-usage*
 
-`highlite`.group({group_name})                                  *highlite.group()*
+`ghostly`.group({group_name})                                  *ghostly.group()*
 
-	Convert a pre-existing |highlight-group| into a format that |highlite|
+	Convert a pre-existing |highlight-group| into a format that |ghostly|
 	recognizes.
 
 	Note: the |highlight-group| must have been either,
 		- |:highlight|ed.
-		- |highlite.highlight()|ed.
+		- |ghostly.highlight()|ed.
 
 	Parameters: ~
 		{group_name}  A `string` which is the |highlight-group| to convert.
 
 	Return: ~
-		- The {definition} parameter for |highlite.highlight()|.
+		- The {definition} parameter for |ghostly.highlight()|.
 
 	Example: ~
 >
-	local highlite = require('highlite')
+	local ghostly = require('ghostly')
 
 	-- get the 'Error' highlight group
-	local hl_error = highlite.group('Error')
+	local hl_error = ghostly.group('Error')
 
 	-- Define 'ErrorMsg' as foreground = background of 'Error'
-	highlite.highlight('ErrorMsg', {fg=hl_error.bg, bg=BG})
+	ghostly.highlight('ErrorMsg', {fg=hl_error.bg, bg=BG})
 <
 
-`highlite`.highlight({group}, {definition})                 *highlite.highlight()*
+`ghostly`.highlight({group}, {definition})                 *ghostly.highlight()*
 
 	Highlight some {group} according to its {definition}.
 
@@ -86,7 +86,7 @@ USAGE                                                           *highlite-usage*
 			[, underline = true|false]
 		}
 <		              Can also be a :|highlight-link|: >
-		'GroupName' -- highlite style
+		'GroupName' -- ghostly style
 		{link = 'GroupName'} -- Nvim API style
 <
 
@@ -95,8 +95,8 @@ USAGE                                                           *highlite-usage*
 
 	Example: ~
 >
-		-- Import nvim-highlite
-		local highlite = require('highlite')
+		-- Import nvim-ghostly
+		local ghostly = require('ghostly')
 
 		-- First, define some colors
 		local red = {'#FF0000', 1, 'red'}
@@ -104,26 +104,26 @@ USAGE                                                           *highlite-usage*
 		local white = {'#FFFFFF', 255, 'white'}
 
 		-- Highlight 'Identifier'
-		highlite.highlight('Identifier', {
+		ghostly.highlight('Identifier', {
 			bg = red,
 			fg = black,
 			bold = true,
 		})
 
 		-- Highlight 'Function' conditionally according to background color.
-		highlite.highlight('Function', {
+		ghostly.highlight('Function', {
 			bg = black,
 			fg = red,
 			light = {bg = white},
 		})
 
 		-- Link 'Example' to 'Identifier' (both calls are equivalent)
-		highlite.highlight('Example', 'Identifier')
-		highlite.highlight('Example', {link = 'Identifier'})
+		ghostly.highlight('Example', 'Identifier')
+		ghostly.highlight('Example', {link = 'Identifier'})
 
 		-- reference specific attributes of another highlight group.
-		highlite.highlight('AnotherExample', {
-			bg = highlite.group('SpellBad').bg,
+		ghostly.highlight('AnotherExample', {
+			bg = ghostly.group('SpellBad').bg,
 			fg = white,
 		})
 <
@@ -134,14 +134,14 @@ USAGE                                                           *highlite-usage*
 		|treesitter-highlight-groups|  Treesitter semantic highlighting groups.
 		|lsp-semantic-highlight|  LSP semantic highlighting groups.
 
-                                                      *highlite.highlight_all()*
-`highlite`.highlight_all({groups})
+                                                      *ghostly.highlight_all()*
+`ghostly`.highlight_all({groups})
 
-	Process all of the {groups}, and then |highlite.highlight()| them.
+	Process all of the {groups}, and then |ghostly.highlight()| them.
 
 	Parameters: ~
 		{groups}  A |lua| `table` keyed on the group name, with the value set to
-		          the {definition} (see |highlite.highlight()|) of the group.
+		          the {definition} (see |ghostly.highlight()|) of the group.
 
 					 A key's value can also be a `function` which accepts one
 					 parameter, which can be used to access other groups'
@@ -156,7 +156,7 @@ USAGE                                                           *highlite-usage*
 		local black = {'#000000', 0, 'black'}
 		local white = {'#FFFFFF', 255, 'white'}
 
-		require('highlite').highlight_all {
+		require('ghostly').highlight_all {
 			-- Any field which can be set to "NONE" doesn't need to be set
 			Identifier = {fg = black, bold = true},
 
@@ -177,10 +177,10 @@ USAGE                                                           *highlite-usage*
 <
 
 	See also: ~
-		|highlite.highlight()|  For how the {definition} should be formed
+		|ghostly.highlight()|  For how the {definition} should be formed
 
-                                                 *highlite-highlight_terminal()*
-`highlite`.highlight_terminal({terminal_ansi_colors})
+                                                 *ghostly-highlight_terminal()*
+`ghostly`.highlight_terminal({terminal_ansi_colors})
 
 	Override the |terminal| colors with a new table of {terminal_ansi_colors}.
 
@@ -212,7 +212,7 @@ USAGE                                                           *highlite-usage*
 
 	Example: ~
 >
-		require('highlite'):highlight_terminal {
+		require('ghostly'):highlight_terminal {
 			[1]  = {'#202020' , 0   , 'black'},
 			[2]  = {'#a80000' , 124 , 'darkred'},
 			[3]  = {'#50de60' , 83  , 'darkgreen'},
@@ -236,7 +236,7 @@ USAGE                                                           *highlite-usage*
 		|terminal-configuration|  Information about how the groups are set.
 
 ==============================================================================
-FAQ                                                             *highlite-faq*
+FAQ                                                             *ghostly-faq*
 
 E5108: Error executing lua [string ":lua"]:1: module '<colorscheme>' not found ~
 
@@ -247,7 +247,7 @@ Override the highlighting of one specific highlight group in my init.vim? ~
 When using this plugin, it is important to know that you cannot just run `:hi`
 on a highlight group and expect that its changes will be retained. You must
 attach them to the |ColorScheme| |autocmd-event|, as shown below: >
-	packadd nvim-highlite
+	packadd nvim-ghostly
 	set termguicolors "optional
 
 	" WRONG! Don't do this.
@@ -255,15 +255,15 @@ attach them to the |ColorScheme| |autocmd-event|, as shown below: >
 
 	" Do this instead.
 	augroup Highlite
-		" You can also use `highlite.highlight()` instead of `:hi!`
-		autocmd ColorScheme highlite hi! Error guifg=#000000 guibg=#FFFFFF
+		" You can also use `ghostly.highlight()` instead of `:hi!`
+		autocmd ColorScheme ghostly hi! Error guifg=#000000 guibg=#FFFFFF
 	augroup end
 
-	colorscheme highlite
+	colorscheme ghostly
 <
 
 Or, in lua: >
-	vim.api.nvim_command 'packadd nvim-highlite'
+	vim.api.nvim_command 'packadd nvim-ghostly'
 	vim.api.nvim_set_option('termguicolors', true)
 
 	-- WARN: don't do this!
@@ -276,13 +276,13 @@ Or, in lua: >
 		 -- other groups
 	  end,
 	  group = vim.api.nvim_create_augroup('config', {clear = true}),
-	  pattern = 'highlite',
+	  pattern = 'ghostly',
 	})
 
-	vim.api.nvim_command 'colorscheme highlite'
+	vim.api.nvim_command 'colorscheme ghostly'
 <
 
-Of course, substitute `highlite` with the name of your colorscheme.
+Of course, substitute `ghostly` with the name of your colorscheme.
 
 ===============================================================================
  vim:tw=78:noexpandtab:ft=help:norl:
