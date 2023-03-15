@@ -8,7 +8,6 @@ Initially forked from vim-rnb, a Vim colorsheme template:
 * Author:        Romain Lafourcade (https://github.com/romainl)
 * Canonical URL: https://github.com/romainl/vim-rnb
 ]]
-
 --[[ Introduction
 This template is designed to help Neovim users create their own colorschemes
 without much effort. You will not need any additional tooling: just open it
@@ -22,7 +21,6 @@ The process is divided in five steps:
 4. Define your highlight groups and links, and
 5. Sourcing your colorscheme.
 ]]
-
 --[[ Step 1: Renaming
 * If this file is distributed with a colorscheme it's probably already named correctly
   and you can skip this step.
@@ -48,15 +46,12 @@ Rename the following files:
 NOTE: If you are on a Unix-based system (or have WSL on Windows) you can use the setup script at the root of this repo.
 	   See the README for more details.
 ]]
-
-
 --[[ Step 2: Information
 In this step you will define information that helps Neovim process:
 
 1. How users access your colorscheme;
 2. How your colorscheme should be rendered.
 ]]
-
 -- This is the name of your colorscheme which will be used as per |g:colors_name|.
 local colorscheme_name = 'ghostly'
 
@@ -86,41 +81,40 @@ emulator. Type errors in the definition will show up as LSP diagnostics.
 
 NOTE: |Replace-mode| will probably be useful here.
 ]]
+local black        = { '#2d2040', 235, 'black' }     --- @type ghostly.color.definition
+local gray         = { '#3b3d54', 244, 'gray' }      --- @type ghostly.color.definition
+local gray_dark    = { '#38364e', 236, 'darkgrey' }  --- @type ghostly.color.definition
+local gray_darker  = { '#323045', 239, 'gray' }      --- @type ghostly.color.definition
+local gray_light   = { '#4f4c6b', 250, 'gray' }      --- @type ghostly.color.definition
+local white        = { '#e2e1ea', 231, 'white' }     --- @type ghostly.color.definition
 
-local black       = {'#202020', 235, 'black'} --- @type ghostly.color.definition
-local gray        = {'#808080', 244, 'gray'} --- @type ghostly.color.definition
-local gray_dark   = {'#353535', 236, 'darkgrey'} --- @type ghostly.color.definition
-local gray_darker = {'#505050', 239, 'gray'} --- @type ghostly.color.definition
-local gray_light  = {'#c0c0c0', 250, 'gray'} --- @type ghostly.color.definition
-local white       = {'#ffffff', 231, 'white'} --- @type ghostly.color.definition
+local tan          = { '#f4c069', 221, 'yellow' }    --- @type ghostly.color.definition
 
-local tan = {'#f4c069', 221, 'yellow'} --- @type ghostly.color.definition
+local red          = { '#d08092', 203, 'red' }       --- @type ghostly.color.definition
+local red_dark     = { '#cc7588', 124, 'darkred' }   --- @type ghostly.color.definition
+local red_light    = { '#d897a5', 205, 'red' }       --- @type ghostly.color.definition
 
-local red       = {'#ee4a59', 203, 'red'} --- @type ghostly.color.definition
-local red_dark  = {'#a80000', 124, 'darkred'} --- @type ghostly.color.definition
-local red_light = {'#ff4090', 205, 'red'} --- @type ghostly.color.definition
+local orange       = { '#e5aa8a', 208, 'darkyellow' } --- @type ghostly.color.definition
+local orange_light = { '#09b69b', 214, 'darkyellow' } --- @type ghostly.color.definition
 
-local orange       = {'#ff8900', 208, 'darkyellow'} --- @type ghostly.color.definition
-local orange_light = {'#f0af00', 214, 'darkyellow'} --- @type ghostly.color.definition
+local yellow       = { '#dacd8b', 227, 'yellow' }    --- @type ghostly.color.definition
 
-local yellow = {'#f0df33', 227, 'yellow'} --- @type ghostly.color.definition
+local green_dark   = { '#89be9d', 113, 'darkgreen' } --- @type ghostly.color.definition
+local green        = { '#99c7ab', 46, 'green' }      --- @type ghostly.color.definition
+local green_light  = { '#a6ceb5', 120, 'green' }     --- @type ghostly.color.definition
+local turqoise     = { '#87c3bf', 48, 'green' }      --- @type ghostly.color.definition
 
-local green_dark  = {'#70d533', 113, 'darkgreen'} --- @type ghostly.color.definition
-local green       = {'#22ff22', 46,  'green'} --- @type ghostly.color.definition
-local green_light = {'#99ff99', 120, 'green'} --- @type ghostly.color.definition
-local turqoise    = {'#2bff99', 48,  'green'} --- @type ghostly.color.definition
+local blue         = { '#829cd3', 63, 'darkblue' }   --- @type ghostly.color.definition
+local cyan         = { '#80bfd1', 80, 'cyan' }       --- @type ghostly.color.definition
+local ice          = { '#92a8d9', 111, 'cyan' }      --- @type ghostly.color.definition
+local teal         = { '#90c5b5', 75, 'blue' }       --- @type ghostly.color.definition
 
-local blue = {'#7766ff', 63,  'darkblue'} --- @type ghostly.color.definition
-local cyan = {'#33dbc3', 80,  'cyan'} --- @type ghostly.color.definition
-local ice  = {'#95c5ff', 111, 'cyan'} --- @type ghostly.color.definition
-local teal = {'#60afff', 75,  'blue'} --- @type ghostly.color.definition
-
-local magenta      = {'#d5508f', 168, 'magenta'} --- @type ghostly.color.definition
-local magenta_dark = {'#bb0099', 126, 'darkmagenta'} --- @type ghostly.color.definition
-local pink         = {'#ffa6ff', 219, 'magenta'} --- @type ghostly.color.definition
-local pink_light   = {'#ffb7b7', 217, 'white'} --- @type ghostly.color.definition
-local purple       = {'#cf55f0', 171, 'magenta'} --- @type ghostly.color.definition
-local purple_light = {'#af60af', 133, 'darkmagenta'} --- @type ghostly.color.definition
+local magenta      = { '#b08cc5', 168, 'magenta' }   --- @type ghostly.color.definition
+local magenta_dark = { '#ab85c1', 126, 'darkmagenta' } --- @type ghostly.color.definition
+local pink         = { '#d9b1be', 219, 'magenta' }   --- @type ghostly.color.definition
+local pink_light   = { '#ddbbc6', 217, 'white' }     --- @type ghostly.color.definition
+local purple       = { '#b678c4', 171, 'magenta' }   --- @type ghostly.color.definition
+local purple_light = { '#c28ecd', 133, 'darkmagenta' } --- @type ghostly.color.definition
 
 --[[ Step 4: highlights
 You can define highlight groups like this:
@@ -241,7 +235,6 @@ NOTE: /As long as you do not remove any highlight groups or colors/, you can
 		automatically be defining the rest of the highlights, which is one of
 		the benefits of using this template.
 ]]
-
 -- WARN: users shouldn't touch this.
 local colorscheme = require(colorscheme_name)
 
@@ -251,58 +244,58 @@ colorscheme.highlight_all {
 	--[[ Plaintext ]]
 
 	-- Basic styles
-	Bold = {bold = true},
-	Italic = {italic = true},
-	Normal = {fg = gray_light},
+	Bold = { bold = true },
+	Italic = { italic = true },
+	Normal = { fg = gray_light },
 	Title = 'Bold',
-	Underlined = {fg = turqoise, underline = true},
+	Underlined = { fg = turqoise, underline = true },
 	Whitespace = 'NonText',
 
 	-- "Non"-text
 	Conceal = 'NonText',
 	EndOfBuffer = 'NonText',
-	Ignore = {fg = gray},
-	NonText = {fg = gray_darker},
+	Ignore = { fg = gray },
+	NonText = { fg = gray_darker },
 
 	-- Literals
-	Constant = {fg = orange_light},
-	String = {fg = green_dark},
-	Character = {fg = red_light},
-	Number = {fg = pink_light},
-	Boolean = {fg = yellow},
+	Constant = { fg = orange_light },
+	String = { fg = green_dark },
+	Character = { fg = red_light },
+	Number = { fg = pink_light },
+	Boolean = { fg = yellow },
 	Float = 'Number',
 
 	-- Syntax
-	Comment = {fg = gray, italic = true},
-	Conditional = {fg = ice, italic = true},
+	Comment = { fg = gray, italic = true },
+	Conditional = { fg = ice, italic = true },
 	Debug = 'WarningMsg',
-	Delimiter = {fg = white},
-	Exception = {fg = red_light, bold = true},
-	Function = {fg = purple},
-	Identifier = function(self) return {fg = self.Normal.fg} end,
-	Keyword = {fg = teal},
-	Label = {fg = pink, bold = true},
+	Delimiter = { fg = white },
+	Exception = { fg = red_light, bold = true },
+	Function = { fg = purple },
+	Identifier = function(self) return { fg = self.Normal.fg } end,
+	Keyword = { fg = teal },
+	Label = { fg = pink, bold = true },
 	Noise = 'Delimiter',
-	Operator = {fg = green, bold = true},
-	Repeat = {fg = turqoise, italic = true},
-	Statement = {fg = ice},
-	StorageClass = {fg = orange_light, bold = true},
-	Structure = {fg = blue, bold = true},
+	Operator = { fg = green, bold = true },
+	Repeat = { fg = turqoise, italic = true },
+	Statement = { fg = ice },
+	StorageClass = { fg = orange_light, bold = true },
+	Structure = { fg = blue, bold = true },
 	Tag = 'Underlined',
-	Type = {fg = cyan},
-	Typedef = {fg = cyan, italic = true},
+	Type = { fg = cyan },
+	Typedef = { fg = cyan, italic = true },
 
 	-- Pre-processor
-	Define = {fg = blue, nocombine = true},
-	Include = {fg = green_light, nocombine = true},
-	Macro = {fg = blue, italic = true},
-	PreCondit = {fg = tan, italic = true},
-	PreProc = {fg = tan},
+	Define = { fg = blue, nocombine = true },
+	Include = { fg = green_light, nocombine = true },
+	Macro = { fg = blue, italic = true },
+	PreCondit = { fg = tan, italic = true },
+	PreProc = { fg = tan },
 
 	-- Special
-	Special = {fg = magenta, bold = true},
-	SpecialChar = {fg = red_light, italic = true},
-	SpecialComment = {fg = gray, bold = true, nocombine = true},
+	Special = { fg = magenta, bold = true },
+	SpecialChar = { fg = red_light, italic = true },
+	SpecialComment = { fg = gray, bold = true, nocombine = true },
 	SpecialKey = 'Character',
 
 	-- LSP
@@ -334,66 +327,66 @@ colorscheme.highlight_all {
 	--[[ Editor UI ]]
 
 	-- Status Line
-	StatusLine = {fg = green_light, bg = gray_darker},
-	StatusLineNC = function(self) return {fg = gray, bg = self.StatusLine.bg} end,
+	StatusLine = { fg = green_light, bg = gray_darker },
+	StatusLineNC = function(self) return { fg = gray, bg = self.StatusLine.bg } end,
 	StatusLineTerm = 'StatusLine',
 	StatusLineTermNC = 'StatusLineNC',
 
 	-- Tabline
-	TabLine = function(self) return {fg = self.Normal.fg, bg = self.StatusLine.bg} end,
-	TabLineFill = function(self) return {fg = self.TabLine.bg, bg = black} end,
-	TabLineSel = function(self) return {fg = self.TabLine.fg, bg = self.Normal.bg} end,
+	TabLine = function(self) return { fg = self.Normal.fg, bg = self.StatusLine.bg } end,
+	TabLineFill = function(self) return { fg = self.TabLine.bg, bg = black } end,
+	TabLineSel = function(self) return { fg = self.TabLine.fg, bg = self.Normal.bg } end,
 
 	-- Line Highlighting
-	CursorLine = {bg = gray_dark},
-	CursorLineNr = function(self) return {fg = pink, bg = self.LineNr.bg} end,
-	LineNr = {fg = gray},
-	QuickFixLine = function(self) return {bg = self.StatusLine.bg} end,
-	Visual = {reverse = true},
-	VisualNOS = {bg = gray_darker},
+	CursorLine = { bg = gray_dark },
+	CursorLineNr = function(self) return { fg = pink, bg = self.LineNr.bg } end,
+	LineNr = { fg = gray },
+	QuickFixLine = function(self) return { bg = self.StatusLine.bg } end,
+	Visual = { reverse = true },
+	VisualNOS = { bg = gray_darker },
 
 	-- Popups
-	FloatBorder = {fg = gray},
-	Pmenu = function(self) return {fg = self.Normal.fg, bg = gray_dark} end,
-	PmenuSbar = {bg = gray_darker},
-	PmenuSel = {fg = black, bg = gray_light},
-	PmenuThumb = {bg = white},
+	FloatBorder = { fg = gray },
+	Pmenu = function(self) return { fg = self.Normal.fg, bg = gray_dark } end,
+	PmenuSbar = { bg = gray_darker },
+	PmenuSel = { fg = black, bg = gray_light },
+	PmenuThumb = { bg = white },
 	WildMenu = 'PmenuSel',
 
 	-- Folds
-	FoldColumn = {bg = gray_darker, bold = true},
-	Folded = {fg = black, bg = purple_light, italic = true},
+	FoldColumn = { bg = gray_darker, bold = true },
+	Folded = { fg = black, bg = purple_light, italic = true },
 
 	-- Diffs
-	DiffAdd = {fg = black, bg = green_dark},
+	DiffAdd = { fg = black, bg = green_dark },
 	diffAdded = 'DiffAdd',
 	DiffChange = {},
-	DiffDelete = function(self) return {fg = self.DiffAdd.fg, bg = red} end,
-	DiffText = function(self) return {fg = self.DiffAdd.fg, bg = yellow} end,
+	DiffDelete = function(self) return { fg = self.DiffAdd.fg, bg = red } end,
+	DiffText = function(self) return { fg = self.DiffAdd.fg, bg = yellow } end,
 	diffRemoved = 'DiffDelete',
 
 	-- Searching
-	IncSearch = {reverse = true},
-	MatchParen = {fg = green, bold = true, underline = true},
-	Search = {sp = white, underline = true},
+	IncSearch = { reverse = true },
+	MatchParen = { fg = green, bold = true, underline = true },
+	Search = { sp = white, underline = true },
 
 	-- Spelling
-	SpellBad = {sp = red, undercurl = true},
-	SpellCap = {sp = yellow, undercurl = true},
-	SpellLocal = {sp = green, undercurl = true},
-	SpellRare = {sp = orange, undercurl = true},
+	SpellBad = { sp = red, undercurl = true },
+	SpellCap = { sp = yellow, undercurl = true },
+	SpellLocal = { sp = green, undercurl = true },
+	SpellRare = { sp = orange, undercurl = true },
 
 	-- Conditional Column Highlighting
-	ColorColumn = {reverse = true},
+	ColorColumn = { reverse = true },
 	SignColumn = {},
 
 	-- Messages
-	Error = {fg = white, bg = red_dark, bold = true},
-	ErrorMsg = {fg = red, bold = true},
-	ModeMsg = {fg = yellow},
-	Question = {fg = orange_light, underline = true},
-	Todo = {fg = black, bg = cyan, bold = true},
-	WarningMsg = {fg = orange, bold = true},
+	Error = { fg = white, bg = red_dark, bold = true },
+	ErrorMsg = { fg = red, bold = true },
+	ModeMsg = { fg = yellow },
+	Question = { fg = orange_light, underline = true },
+	Todo = { fg = black, bg = cyan, bold = true },
+	WarningMsg = { fg = orange, bold = true },
 
 	-- Diagnostics
 	debugBreakpoint = 'ErrorMsg',
@@ -403,31 +396,31 @@ colorscheme.highlight_all {
 	DiagnosticFloatingError = 'ErrorMsg',
 	DiagnosticSignError = 'DiagnosticFloatingError',
 
-	DiagnosticWarn = {fg = black, bg = orange, bold = true},
+	DiagnosticWarn = { fg = black, bg = orange, bold = true },
 	DiagnosticFloatingWarn = 'WarningMsg',
 	DiagnosticSignWarn = 'DiagnosticFloatingWarn',
 
-	DiagnosticHint = {fg = black, bg = magenta, bold = true},
-	DiagnosticFloatingHint = {fg = magenta, italic = true},
+	DiagnosticHint = { fg = black, bg = magenta, bold = true },
+	DiagnosticFloatingHint = { fg = magenta, italic = true },
 	DiagnosticSignHint = 'DiagnosticFloatingHint',
 
-	DiagnosticInfo = {fg = black, bg = pink_light, bold = true},
-	DiagnosticFloatingInfo = {fg = pink_light, italic = true},
+	DiagnosticInfo = { fg = black, bg = pink_light, bold = true },
+	DiagnosticFloatingInfo = { fg = pink_light, italic = true },
 	DiagnosticSignInfo = 'DiagnosticFloatingInfo',
 
-	DiagnosticUnderlineError = {sp = red, undercurl = true},
-	DiagnosticUnderlineHint = {sp = magenta, undercurl = true},
-	DiagnosticUnderlineInfo = {sp = pink_light, undercurl = true},
-	DiagnosticUnderlineWarn = {sp = orange, undercurl = true},
+	DiagnosticUnderlineError = { sp = red, undercurl = true },
+	DiagnosticUnderlineHint = { sp = magenta, undercurl = true },
+	DiagnosticUnderlineInfo = { sp = pink_light, undercurl = true },
+	DiagnosticUnderlineWarn = { sp = orange, undercurl = true },
 
 	-- Cursor
-	Cursor = {reverse = true},
+	Cursor = { reverse = true },
 	CursorIM = 'Cursor',
-	CursorColumn = {bg = gray_dark},
+	CursorColumn = { bg = gray_dark },
 
 	-- Misc
-	Directory = {fg = ice, bold = true},
-	VertSplit = {fg = white},
+	Directory = { fg = ice, bold = true },
+	VertSplit = { fg = white },
 
 	--[[ Programming Languages
 		Everything in this section is OPTIONAL. Feel free to remove everything
@@ -689,7 +682,7 @@ colorscheme.highlight_all {
 	luaStatement = 'Keyword',
 	luaStringLongTag = function(self)
 		local delimiter = self.Delimiter
-		return {bg = delimiter.bg, fg = delimiter.fg, italic = true}
+		return { bg = delimiter.bg, fg = delimiter.fg, italic = true }
 	end,
 
 	-- Make
@@ -707,12 +700,12 @@ colorscheme.highlight_all {
 	-- Markdown
 	markdownCode = 'mkdCode',
 	markdownCodeDelimiter = 'mkdCodeDelimiter',
-	markdownH1 = {fg = red, bold = true},
-	markdownH2 = {fg = orange, bold = true},
-	markdownH3 = {fg = yellow, bold = true},
-	markdownH4 = {fg = green_dark, bold = true},
-	markdownH5 = {fg = cyan, bold = true},
-	markdownH6 = {fg = purple_light, bold = true},
+	markdownH1 = { fg = red, bold = true },
+	markdownH2 = { fg = orange, bold = true },
+	markdownH3 = { fg = yellow, bold = true },
+	markdownH4 = { fg = green_dark, bold = true },
+	markdownH5 = { fg = cyan, bold = true },
+	markdownH6 = { fg = purple_light, bold = true },
 	markdownLinkDelimiter = 'mkdDelimiter',
 	markdownLinkText = 'mkdLink',
 	markdownLinkTextDelimiter = 'markdownLinkDelimiter',
@@ -729,7 +722,7 @@ colorscheme.highlight_all {
 	mkdLineBreak = 'NonText',
 	mkdLink = 'Underlined',
 	mkdListItem = 'Special',
-	mkdRule = function(self) return {fg = self.Ignore.fg, sp = self.Delimiter.fg, underline = true} end,
+	mkdRule = function(self) return { fg = self.Ignore.fg, sp = self.Delimiter.fg, underline = true } end,
 	mkdURL = 'htmlString',
 
 	-- PlantUML
@@ -823,7 +816,7 @@ colorscheme.highlight_all {
 	scssInclude = 'Include',
 	scssMixinName = function(self)
 		local definition = self.cssClassName
-		return {bg = definition.bg, fg = definition.fg, italic = true}
+		return { bg = definition.bg, fg = definition.fg, italic = true }
 	end,
 	scssSelectorChar = 'Delimiter',
 	scssSelectorName = 'Identifier',
@@ -910,51 +903,51 @@ colorscheme.highlight_all {
 	ALEWarningSign = 'DiagnosticSignWarn',
 
 	-- barbar.nvim
-	BufferAlternate = function(self) return {fg = self.BufferVisible.fg, bg = gray_dark} end,
-	BufferAlternateERROR = function(self) return {fg = self.ErrorMsg.fg, bg = gray_dark} end,
-	BufferAlternateHINT = function(self) return {fg = self.DiagnosticFloatingHint.fg, bg = gray_dark} end,
-	BufferAlternateIndex = function(self) return {fg = self.Number.fg, bg = gray_dark} end,
-	BufferAlternateINFO = function(self) return {fg = self.DiagnosticFloatingInfo.fg, bg = gray_dark} end,
-	BufferAlternateMod = function(self) return {fg = self.BufferVisibleMod.fg, bg = gray_dark, bold = true} end,
-	BufferAlternateSign = {fg = teal, bg = gray_dark},
-	BufferAlternateTarget = function(self) return {fg = self.BufferAlternateSign.fg, bg = gray_dark, italic = true} end,
-	BufferAlternateWARN = function(self) return {fg = self.WarningMsg.fg, bg = gray_dark} end,
+	BufferAlternate = function(self) return { fg = self.BufferVisible.fg, bg = gray_dark } end,
+	BufferAlternateERROR = function(self) return { fg = self.ErrorMsg.fg, bg = gray_dark } end,
+	BufferAlternateHINT = function(self) return { fg = self.DiagnosticFloatingHint.fg, bg = gray_dark } end,
+	BufferAlternateIndex = function(self) return { fg = self.Number.fg, bg = gray_dark } end,
+	BufferAlternateINFO = function(self) return { fg = self.DiagnosticFloatingInfo.fg, bg = gray_dark } end,
+	BufferAlternateMod = function(self) return { fg = self.BufferVisibleMod.fg, bg = gray_dark, bold = true } end,
+	BufferAlternateSign = { fg = teal, bg = gray_dark },
+	BufferAlternateTarget = function(self) return { fg = self.BufferAlternateSign.fg, bg = gray_dark, italic = true } end,
+	BufferAlternateWARN = function(self) return { fg = self.WarningMsg.fg, bg = gray_dark } end,
 
 	BufferCurrent = 'TabLineSel',
-	BufferCurrentERROR = function(self) return {fg = self.ErrorMsg.fg, bg = self.BufferCurrent.bg} end,
-	BufferCurrentHINT = function(self) return {fg = self.DiagnosticFloatingHint.fg, bg = self.BufferCurrent.bg} end,
-	BufferCurrentIndex = function(self) return {fg = self.Number.fg, bg = self.BufferCurrent.bg} end,
-	BufferCurrentINFO = function(self) return {fg = self.DiagnosticFloatingInfo.fg, bg = self.BufferCurrent.bg} end,
-	BufferCurrentMod = {fg = tan, bg = black, bold = true},
+	BufferCurrentERROR = function(self) return { fg = self.ErrorMsg.fg, bg = self.BufferCurrent.bg } end,
+	BufferCurrentHINT = function(self) return { fg = self.DiagnosticFloatingHint.fg, bg = self.BufferCurrent.bg } end,
+	BufferCurrentIndex = function(self) return { fg = self.Number.fg, bg = self.BufferCurrent.bg } end,
+	BufferCurrentINFO = function(self) return { fg = self.DiagnosticFloatingInfo.fg, bg = self.BufferCurrent.bg } end,
+	BufferCurrentMod = { fg = tan, bg = black, bold = true },
 	BufferCurrentSign = 'DiagnosticFloatingHint',
 	BufferCurrentTarget = 'BufferCurrentSign',
-	BufferCurrentWARN = function(self) return {fg = self.WarningMsg.fg, bg = self.BufferCurrent.bg} end,
+	BufferCurrentWARN = function(self) return { fg = self.WarningMsg.fg, bg = self.BufferCurrent.bg } end,
 
 	BufferInactive = 'BufferVisible',
-	BufferInactiveERROR = function(self) return {fg = self.ErrorMsg.fg, bg = self.BufferInactive.bg} end,
-	BufferInactiveHINT = function(self) return {fg = self.DiagnosticFloatingHint.fg, bg = self.BufferInactive.bg} end,
-	BufferInactiveIndex = function(self) return {fg = self.Number.fg, bg = self.BufferInactive.bg} end,
-	BufferInactiveINFO = function(self) return {fg = self.DiagnosticFloatingInfo.fg, bg = self.BufferInactive.bg} end,
+	BufferInactiveERROR = function(self) return { fg = self.ErrorMsg.fg, bg = self.BufferInactive.bg } end,
+	BufferInactiveHINT = function(self) return { fg = self.DiagnosticFloatingHint.fg, bg = self.BufferInactive.bg } end,
+	BufferInactiveIndex = function(self) return { fg = self.Number.fg, bg = self.BufferInactive.bg } end,
+	BufferInactiveINFO = function(self) return { fg = self.DiagnosticFloatingInfo.fg, bg = self.BufferInactive.bg } end,
 	BufferInactiveMod = 'BufferVisibleMod',
 	BufferInactiveSign = 'BufferVisibleSign',
 	BufferInactiveTarget = 'BufferVisibleTarget',
-	BufferInactiveWARN = function(self) return {fg = self.WarningMsg.fg, bg = self.BufferInactive.bg} end,
+	BufferInactiveWARN = function(self) return { fg = self.WarningMsg.fg, bg = self.BufferInactive.bg } end,
 
-	BufferTabpages = {bold = true},
+	BufferTabpages = { bold = true },
 	BufferTabpageFill = 'TabLineFill',
 
 	BufferVisible = 'TabLine',
-	BufferVisibleERROR = function(self) return {fg = self.ErrorMsg.fg, bg = self.BufferVisible.bg} end,
-	BufferVisibleHINT = function(self) return {fg = self.DiagnosticFloatingHint.fg, bg = self.BufferVisible.bg} end,
-	BufferVisibleIndex = function(self) return {fg = self.Number.fg, bg = self.BufferVisible.bg} end,
-	BufferVisibleINFO = function(self) return {fg = self.DiagnosticFloatingInfo.fg, bg = self.BufferVisible.bg} end,
-	BufferVisibleMod = function(self) return {fg = white, bg = self.BufferVisible.bg, italic = true} end,
+	BufferVisibleERROR = function(self) return { fg = self.ErrorMsg.fg, bg = self.BufferVisible.bg } end,
+	BufferVisibleHINT = function(self) return { fg = self.DiagnosticFloatingHint.fg, bg = self.BufferVisible.bg } end,
+	BufferVisibleIndex = function(self) return { fg = self.Number.fg, bg = self.BufferVisible.bg } end,
+	BufferVisibleINFO = function(self) return { fg = self.DiagnosticFloatingInfo.fg, bg = self.BufferVisible.bg } end,
+	BufferVisibleMod = function(self) return { fg = white, bg = self.BufferVisible.bg, italic = true } end,
 	BufferVisibleSign = function(self)
 		local definition = self.BufferVisibleMod
-		return {fg = definition.fg, bg = definition.bg, bold = true}
+		return { fg = definition.fg, bg = definition.bg, bold = true }
 	end,
 	BufferVisibleTarget = 'BufferVisibleSign',
-	BufferVisibleWARN = function(self) return {fg = self.WarningMsg.fg, bg = self.BufferVisible.bg} end,
+	BufferVisibleWARN = function(self) return { fg = self.WarningMsg.fg, bg = self.BufferVisible.bg } end,
 
 	-- coc.nvim
 	CocErrorHighlight = 'DiagnosticUnderlineError',
@@ -1027,7 +1020,7 @@ colorscheme.highlight_all {
 	-- nvim-cmp
 	CmpItemAbbr = 'Ignore',
 	CmpItemAbbrMatch = 'Underlined',
-	CmpItemAbbrMatchFuzzy = function(self) return {fg = self.Normal.fg, nocombine = true, underline = true} end,
+	CmpItemAbbrMatchFuzzy = function(self) return { fg = self.Normal.fg, nocombine = true, underline = true } end,
 	CmpItemKindClass = 'CmpItemKindStruct',
 	CmpItemKindsp = 'Label',
 	CmpItemKindConstant = 'Constant',
@@ -1056,13 +1049,13 @@ colorscheme.highlight_all {
 	CmpItemKindVariable = 'Identifier',
 
 	-- nvim-tree
-	NvimTreeGitDeleted = function(self) return {fg = self.DiffDelete.bg} end,
-	NvimTreeGitDirty = {fg = orange},
+	NvimTreeGitDeleted = function(self) return { fg = self.DiffDelete.bg } end,
+	NvimTreeGitDirty = { fg = orange },
 	NvimTreeGitIgnored = 'Ignore',
 	NvimTreeGitMerge = 'NvimTreeGitRenamed',
-	NvimTreeGitNew = function(self) return {fg = self.DiffAdd.bg} end,
-	NvimTreeGitRenamed = function(self) return {fg = self.DiffChange.bg} end,
-	NvimTreeGitStaged = {fg = cyan},
+	NvimTreeGitNew = function(self) return { fg = self.DiffAdd.bg } end,
+	NvimTreeGitRenamed = function(self) return { fg = self.DiffChange.bg } end,
+	NvimTreeGitStaged = { fg = cyan },
 
 	-- packer.nvim
 	packerFail = 'ErrorMsg',
@@ -1082,19 +1075,25 @@ colorscheme.highlight_all {
 	SymbolsOutlineConnector = 'Delimiter',
 
 	-- todo-comments.nvim
-	TodoFgFIX = function(self) return {fg = self.ErrorMsg.fg} end,
-	TodoFgHACK = {fg = yellow},
+	TodoFgFIX = function(self) return { fg = self.ErrorMsg.fg } end,
+	TodoFgHACK = { fg = yellow },
 	TodoFgNOTE = 'DiagnosticFloatingHint',
 	TodoFgPERF = 'DiagnosticFloatingInfo',
-	TodoFgTODO = function(self) return {fg = self.Todo.bg, italic = true} end,
-	TodoFgWARN = function(self) return {fg = self.WarningMsg.fg} end,
+	TodoFgTODO = function(self) return { fg = self.Todo.bg, italic = true } end,
+	TodoFgWARN = function(self) return { fg = self.WarningMsg.fg } end,
 
-	TodoBgFIX = function(self) return {fg = black, bg = self.TodoFgFIX.fg, bold = true, italic = true, nocombine = true} end,
-	TodoBgHACK = function(self) return {fg = black, bg = self.TodoFgHACK.fg, bold = true, italic = true, nocombine = true} end,
-	TodoBgNOTE = function(self) return {fg = black, bg = self.TodoFgNOTE.fg, bold = true, italic = true, nocombine = true} end,
-	TodoBgPERF = function(self) return {fg = black, bg = self.TodoFgPERF.fg, bold = true, italic = true, nocombine = true} end,
-	TodoBgTODO = function(self) return {fg = black, bg = self.TodoFgTODO.fg, bold = true, italic = true, nocombine = true} end,
-	TodoBgWARN = function(self) return {fg = black, bg = self.TodoFgWARN.fg, bold = true, italic = true, nocombine = true} end,
+	TodoBgFIX = function(self) return { fg = black, bg = self.TodoFgFIX.fg, bold = true, italic = true,
+			nocombine = true } end,
+	TodoBgHACK = function(self) return { fg = black, bg = self.TodoFgHACK.fg, bold = true, italic = true,
+			nocombine = true } end,
+	TodoBgNOTE = function(self) return { fg = black, bg = self.TodoFgNOTE.fg, bold = true, italic = true,
+			nocombine = true } end,
+	TodoBgPERF = function(self) return { fg = black, bg = self.TodoFgPERF.fg, bold = true, italic = true,
+			nocombine = true } end,
+	TodoBgTODO = function(self) return { fg = black, bg = self.TodoFgTODO.fg, bold = true, italic = true,
+			nocombine = true } end,
+	TodoBgWARN = function(self) return { fg = black, bg = self.TodoFgWARN.fg, bold = true, italic = true,
+			nocombine = true } end,
 
 	TodoSignFIX = 'TodoFgFIX',
 	TodoSignHACK = 'TodoFgHACK',
@@ -1114,14 +1113,14 @@ colorscheme.highlight_all {
 	EasyMotion = 'IncSearch',
 
 	-- vim-gitgutter
-	GitGutterAdd = {fg = green},
-	GitGutterChange = {fg = yellow},
-	GitGutterDelete = {fg = red},
-	GitGutterChangeDelete = {fg = orange},
+	GitGutterAdd = { fg = green },
+	GitGutterChange = { fg = yellow },
+	GitGutterDelete = { fg = red },
+	GitGutterChangeDelete = { fg = orange },
 
 	-- vim-indent-guides
-	IndentGuidesOdd = {bg = gray_darker},
-	IndentGuidesEven = {bg = gray},
+	IndentGuidesOdd = { bg = gray_darker },
+	IndentGuidesEven = { bg = gray },
 
 	-- vim-jumpmotion
 	JumpMotion = 'EasyMotion',
@@ -1171,7 +1170,6 @@ colorscheme.highlight_all {
 	While you are certainly free to make colors 0 to 7 shades of blue,
 	this will inevitably cause usability issues so… be careful.
 ]]
-
 colorscheme.highlight_terminal {
 	[1] = black,
 	[2] = red_dark,
@@ -1250,5 +1248,4 @@ colorscheme.highlight_terminal {
 		Vim otherwise. Your users will need to make sure their terminal emulator/multiplexer
 		is correctly set up if they want to enjoy the best possible experience.
 ]]
-
 -- Thanks to Romain Lafourcade (https://github.com/romainl) for the original template (romainl/vim-rnb).
