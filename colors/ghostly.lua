@@ -351,10 +351,10 @@ colorscheme.highlight_all {
 	VisualNOS = { bg = gray_darker },
 
 	-- Popups
-	FloatBorder = { fg = gray },
-	Pmenu = function(self) return { fg = self.Normal.fg, bg = gray_dark } end,
+	FloatBorder = { fg = gray_dark },
+	Pmenu = { fg = gray_light, bg = black },
 	PmenuSbar = { bg = gray_darker },
-	PmenuSel = { fg = black, bg = gray_light },
+	PmenuSel = { fg = white, bg = gray },
 	PmenuThumb = { bg = white },
 	WildMenu = 'PmenuSel',
 
@@ -1023,9 +1023,9 @@ colorscheme.highlight_all {
 	NERDTreeLinkTarget = 'Tag',
 
 	-- nvim-cmp
-	CmpItemAbbr = 'Ignore',
-	CmpItemAbbrMatch = 'Underlined',
-	CmpItemAbbrMatchFuzzy = function(self) return { fg = self.Normal.fg, nocombine = true, underline = true } end,
+	CmpItemAbbr = { fg = white },
+	CmpItemAbbrMatch = { fg = cyan },
+	CmpItemAbbrMatchFuzzy = { fg = cyan, nocombine = true, underline = true },
 	CmpItemKindClass = 'CmpItemKindStruct',
 	CmpItemKindsp = 'Label',
 	CmpItemKindConstant = 'Constant',
