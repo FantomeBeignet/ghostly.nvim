@@ -81,11 +81,11 @@ emulator. Type errors in the definition will show up as LSP diagnostics.
 
 NOTE: |Replace-mode| will probably be useful here.
 ]]
-local black        = { '#261b36', 235, 'black' }       --- @type ghostly.color.definition
-local gray         = { '#67587e', 244, 'gray' }        --- @type ghostly.color.definition
-local gray_dark    = { '#43335b', 236, 'darkgrey' }    --- @type ghostly.color.definition
-local gray_darker  = { '#392951', 239, 'gray' }        --- @type ghostly.color.definition
-local gray_light   = { '#76678e', 250, 'gray' }        --- @type ghostly.color.definition
+local black        = { '#201a28', 235, 'black' }       --- @type ghostly.color.definition
+local gray         = { '#6a6374', 244, 'gray' }        --- @type ghostly.color.definition
+local gray_dark    = { '#46424d', 236, 'darkgrey' }    --- @type ghostly.color.definition
+local gray_darker  = { '#3e3e4c', 239, 'gray' }        --- @type ghostly.color.definition
+local gray_light   = { '#766f80', 250, 'gray' }        --- @type ghostly.color.definition
 local white        = { '#e2e1ea', 231, 'white' }       --- @type ghostly.color.definition
 
 local tan          = { '#f4c069', 221, 'yellow' }      --- @type ghostly.color.definition
@@ -352,7 +352,7 @@ colorscheme.highlight_all {
 
 	-- Popups
 	FloatBorder = { fg = gray_dark },
-	Pmenu = { fg = gray_light, bg = black },
+	Pmenu = { fg = gray_light, bg = gray_darker },
 	PmenuSbar = { bg = gray_darker },
 	PmenuSel = { fg = white, bg = gray },
 	PmenuThumb = { bg = white },
