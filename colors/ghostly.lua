@@ -104,9 +104,9 @@ local green        = { '#99c7ab', 46, 'green' }        --- @type ghostly.color.d
 local green_light  = { '#a6ceb5', 120, 'green' }       --- @type ghostly.color.definition
 local turqoise     = { '#87c3bf', 48, 'green' }        --- @type ghostly.color.definition
 
-local blue         = { '#829cd3', 63, 'darkblue' }     --- @type ghostly.color.definition
+local blue         = { '#5678c2', 63, 'darkblue' }     --- @type ghostly.color.definition
 local cyan         = { '#80bfd1', 80, 'cyan' }         --- @type ghostly.color.definition
-local ice          = { '#92a8d9', 111, 'cyan' }        --- @type ghostly.color.definition
+local ice          = { '#98aedd', 111, 'cyan' }        --- @type ghostly.color.definition
 local teal         = { '#90c5b5', 75, 'blue' }         --- @type ghostly.color.definition
 
 local magenta      = { '#b08cc5', 168, 'magenta' }     --- @type ghostly.color.definition
@@ -259,8 +259,8 @@ colorscheme.highlight_all {
 
 	-- Literals
 	Constant = { fg = ice },
-	String = { fg = blue },
-	Character = { fg = blue },
+	String = { fg = ice },
+	Character = { fg = ice },
 	Number = { fg = white },
 	Boolean = { fg = red_light },
 	Float = 'Number',
@@ -271,9 +271,9 @@ colorscheme.highlight_all {
 	Debug = 'WarningMsg',
 	Delimiter = 'Normal',
 	Exception = { fg = red, bold = true },
-	Function = { fg = purple },
+	Function = { fg = blue },
 	Identifier = 'Normal',
-	Keyword = { fg = magenta_dark },
+	Keyword = { fg = magenta, italic = true },
 	Label = { fg = pink, bold = true },
 	Noise = 'Delimiter',
 	Operator = 'Normal',
@@ -315,6 +315,7 @@ colorscheme.highlight_all {
 	['@constant.macro'] = '@define',
 	['@constructor'] = '@function',
 	['@function.builtin'] = '@function',
+	['@method.call'] = '@function',
 	['@function.macro'] = '@macro',
 	['@namespace'] = 'Directory',
 	['@string.escape'] = '@string.special',
