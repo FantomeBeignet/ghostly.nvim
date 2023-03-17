@@ -15,7 +15,7 @@ in Neovim and follow the instructions.
 
 The process is divided in five steps:
 
-1. Rename the template,
+0. Rename the template,
 2. Edit your colorscheme's information,
 3. Define your colors,
 4. Define your highlight groups and links, and
@@ -100,14 +100,14 @@ local orange_light = { '#09b69b', 214, 'darkyellow' }  --- @type ghostly.color.d
 local yellow       = { '#dacd8b', 227, 'yellow' }      --- @type ghostly.color.definition
 
 local green_dark   = { '#89be9d', 113, 'darkgreen' }   --- @type ghostly.color.definition
-local green        = { '#99c7ab', 46, 'green' }        --- @type ghostly.color.definition
+local green        = { '#99c7ab', 46,  'green' }        --- @type ghostly.color.definition
 local green_light  = { '#a6ceb5', 120, 'green' }       --- @type ghostly.color.definition
-local turqoise     = { '#87c3bf', 48, 'green' }        --- @type ghostly.color.definition
+local turqoise     = { '#87c3bf', 48,  'green' }        --- @type ghostly.color.definition
 
-local blue         = { '#5678c2', 63, 'darkblue' }     --- @type ghostly.color.definition
-local cyan         = { '#80bfd1', 80, 'cyan' }         --- @type ghostly.color.definition
+local blue         = { '#5678c2', 63,  'darkblue' }     --- @type ghostly.color.definition
+local cyan         = { '#80bfd1', 80,  'cyan' }         --- @type ghostly.color.definition
 local ice          = { '#98aedd', 111, 'cyan' }        --- @type ghostly.color.definition
-local teal         = { '#90c5b5', 75, 'blue' }         --- @type ghostly.color.definition
+local teal         = { '#90c5b5', 75,  'blue' }         --- @type ghostly.color.definition
 
 local magenta      = { '#b08cc5', 168, 'magenta' }     --- @type ghostly.color.definition
 local magenta_dark = { '#ab85c1', 126, 'darkmagenta' } --- @type ghostly.color.definition
@@ -286,11 +286,11 @@ colorscheme.highlight_all {
 	Typedef = { fg = cyan, italic = true },
 
 	-- Pre-processor
-	Define = { fg = blue, nocombine = true },
+	Define = { fg = green_light, nocombine = true },
 	Include = { fg = green_light, nocombine = true },
-	Macro = { fg = blue, italic = true },
-	PreCondit = { fg = tan, italic = true },
-	PreProc = { fg = tan },
+	Macro = { fg = red_dark, italic = true },
+	PreCondit = { fg = green_light, italic = true },
+	PreProc = { fg = green_light },
 
 	-- Special
 	Special = { fg = magenta, bold = true },
