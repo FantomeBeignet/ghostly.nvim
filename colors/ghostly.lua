@@ -1181,6 +1181,11 @@ colorscheme.highlight_all {
 	SignifySignChange = 'GitGutterChange',
 	SignifySignDelete = 'GitGutterDelete',
 	SignifySignChangeDelete = 'GitGutterChangeDelete',
+
+	-- Leap.nvim
+	LeapMatch = { fg = white, bold = true, nocombine = true },
+	LeapLabelPrimary = { fg = red, bold = true, nocombine = true },
+	LeapLabelSecondary = { fg = ice, bold = true, nocombine = true },
 }
 
 --[[ Step 5: Terminal Colors
