@@ -1186,6 +1186,9 @@ colorscheme.highlight_all {
 	LeapMatch = { fg = white, bold = true, nocombine = true },
 	LeapLabelPrimary = { fg = red, bold = true, nocombine = true },
 	LeapLabelSecondary = { fg = ice, bold = true, nocombine = true },
+
+	-- HLargs
+	HLargs = { fg = teal },
 }
 
 --[[ Step 5: Terminal Colors
