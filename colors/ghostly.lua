@@ -1027,8 +1027,8 @@ colorscheme.highlight_all {
 
 	-- nvim-cmp
 	CmpItemAbbr = { fg = white },
-	CmpItemAbbrMatch = { fg = cyan },
-	CmpItemAbbrMatchFuzzy = { fg = cyan, nocombine = true, underline = true },
+	CmpItemAbbrMatch = { fg = magenta_dark },
+	CmpItemAbbrMatchFuzzy = { fg = magenta_dark, nocombine = true, underline = true },
 	CmpItemKindClass = 'CmpItemKindStruct',
 	CmpItemKindsp = 'Label',
 	CmpItemKindConstant = 'Constant',
