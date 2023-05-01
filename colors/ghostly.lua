@@ -1190,6 +1190,18 @@ colorscheme.highlight_all {
 
 	-- HLargs
 	HLargs = { fg = teal },
+
+	-- Telescope
+	TelescopeNormal = 'Normal',
+	TelescopeSelection = { fg = white, bg = gray_dark, italic = true },
+	TelescopeSelectionCaret = { fg = white, bg = gray_dark, bold = true },
+	TelescopeMultiSelection = { fg = gray_light, italic = true },
+	TelescopeBorder = 'Normal',
+	TelescopePromptBorder = 'TelescopeBorder',
+	TelescopeResultsBorder = 'TelescopeBorder',
+	TelescopePreviewBorder = 'TelescopeBorder',
+	TelescopeMatching = { fg = magenta_dark },
+	TelescopePromptPrefix = { fg = magenta_dark, bold = true },
 }
 
 --[[ Step 5: Terminal Colors
