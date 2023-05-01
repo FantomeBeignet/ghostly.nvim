@@ -391,7 +391,7 @@ colorscheme.highlight_all {
 	ErrorMsg = { fg = red, bold = true },
 	ModeMsg = { fg = yellow },
 	Question = { fg = blue, underline = true },
-	Todo = { fg = black, bg = cyan, bold = true },
+	Todo = { fg = black, bg = blue, bold = true },
 	WarningMsg = { fg = orange, bold = true },
 	Hint =  { fg = magenta, italic = true },
 	Info =  { fg = blue, italic = true },
@@ -1085,11 +1085,10 @@ colorscheme.highlight_all {
 	-- todo-comments.nvim
 	TodoFgFIX = function(self) return { fg = self.ErrorMsg.fg } end,
 	TodoFgHACK = { fg = yellow },
-	TodoFgNOTE = 'DiagnosticFloatingHint',
-	TodoFgPERF = 'DiagnosticFloatingInfo',
+	TodoFgNOTE = { fg = green_dark },
+	TodoFgPERF = { fg = magenta },
 	TodoFgTODO = function(self) return { fg = self.Todo.bg, italic = true } end,
 	TodoFgWARN = function(self) return { fg = self.WarningMsg.fg } end,
-
 	TodoBgFIX = function(self)
 		return {
 			fg = black,
