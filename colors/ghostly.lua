@@ -393,25 +393,27 @@ colorscheme.highlight_all {
 	Question = { fg = blue, underline = true },
 	Todo = { fg = black, bg = cyan, bold = true },
 	WarningMsg = { fg = orange, bold = true },
+	Hint =  { fg = magenta, italic = true },
+	Info =  { fg = blue, italic = true },
 
 	-- Diagnostics
 	debugBreakpoint = 'ErrorMsg',
 	debugPC = 'ColorColumn',
 
-	DiagnosticError = 'Error',
+	DiagnosticError = 'ErrorMsg',
 	DiagnosticFloatingError = 'ErrorMsg',
 	DiagnosticSignError = 'DiagnosticFloatingError',
 
-	DiagnosticWarn = { fg = black, bg = orange, bold = true },
+	DiagnosticWarn = 'WarningMsg',
 	DiagnosticFloatingWarn = 'WarningMsg',
 	DiagnosticSignWarn = 'DiagnosticFloatingWarn',
 
-	DiagnosticHint = { fg = black, bg = magenta, bold = true },
-	DiagnosticFloatingHint = { fg = magenta, italic = true },
+	DiagnosticHint = 'Hint',
+	DiagnosticFloatingHint = 'Hint',
 	DiagnosticSignHint = 'DiagnosticFloatingHint',
 
-	DiagnosticInfo = { fg = black, bg = blue, bold = true },
-	DiagnosticFloatingInfo = { fg = blue, italic = true },
+	DiagnosticInfo = 'Info',
+	DiagnosticFloatingInfo = 'Info',
 	DiagnosticSignInfo = 'DiagnosticFloatingInfo',
 
 	DiagnosticUnderlineError = { sp = red, undercurl = true },
