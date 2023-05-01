@@ -85,7 +85,7 @@ local black        = { '#201a28', 235, 'black' }       --- @type ghostly.color.d
 local gray         = { '#6a6374', 244, 'gray' }        --- @type ghostly.color.definition
 local gray_dark    = { '#46424d', 236, 'darkgrey' }    --- @type ghostly.color.definition
 local gray_darker  = { '#3e3e4c', 239, 'gray' }        --- @type ghostly.color.definition
-local gray_light   = { '#766f80', 250, 'gray' }        --- @type ghostly.color.definition
+local gray_light   = { '#817a8c', 250, 'gray' }        --- @type ghostly.color.definition
 local white        = { '#e2e1ea', 231, 'white' }       --- @type ghostly.color.definition
 
 local tan          = { '#f4c069', 221, 'yellow' }      --- @type ghostly.color.definition
@@ -344,11 +344,11 @@ colorscheme.highlight_all {
 	TabLineSel = function(self) return { fg = self.TabLine.fg, bg = self.Normal.bg } end,
 
 	-- Line Highlighting
-	CursorLine = { bg = gray_dark },
-	CursorLineNr = function(self) return { fg = pink, bg = self.LineNr.bg } end,
+	CursorLine = { bg = gray_darker },
+	CursorLineNr = function(self) return { fg = magenta_dark, bg = self.LineNr.bg } end,
 	LineNr = { fg = gray },
 	QuickFixLine = function(self) return { bg = self.StatusLine.bg } end,
-	Visual = { reverse = true },
+	Visual = { bg = gray_dark },
 	VisualNOS = { bg = gray_darker },
 
 	-- Popups
