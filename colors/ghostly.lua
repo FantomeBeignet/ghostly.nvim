@@ -81,7 +81,7 @@ emulator. Type errors in the definition will show up as LSP diagnostics.
 
 NOTE: |Replace-mode| will probably be useful here.
 ]]
-local black        = { '#201a28', 235, 'black' }       --- @type ghostly.color.definition
+local black        = { '#2C253C', 235, 'black' }       --- @type ghostly.color.definition
 local gray         = { '#746B7E', 244, 'gray' }        --- @type ghostly.color.definition
 local gray_dark    = { '#5D566B', 236, 'darkgrey' }    --- @type ghostly.color.definition
 local gray_darker  = { '#454057', 239, 'gray' }        --- @type ghostly.color.definition
@@ -1193,15 +1193,22 @@ colorscheme.highlight_all {
 
 	-- Telescope
 	TelescopeNormal = 'Normal',
-	TelescopeSelection = { fg = white, bg = gray_dark, italic = true },
-	TelescopeSelectionCaret = { fg = white, bg = gray_dark, bold = true },
+	TelescopeSelection = { fg = white, bg = gray_darker, italic = true },
+	TelescopeSelectionCaret = { fg = white, bg = gray_darker, bold = true },
 	TelescopeMultiSelection = { fg = gray_light, italic = true },
 	TelescopeBorder = 'Normal',
-	TelescopePromptBorder = 'TelescopeBorder',
-	TelescopeResultsBorder = 'TelescopeBorder',
-	TelescopePreviewBorder = 'TelescopeBorder',
 	TelescopeMatching = { fg = magenta_dark },
 	TelescopePromptPrefix = { fg = magenta_dark, bold = true },
+	TelescopePromptNormal = { bg = gray_darker },
+	TelescopePromptBorder = { bg = gray_darker },
+	TelescopePromptTitle = { fg = gray_darker, bg = gray_darker },
+	TelescopePreviewBorder = { bg = black },
+	TelescopePreviewTitle = { fg = black, bg = black },
+	TelescopePreviewNormal = { bg = black },
+	TelescopeResultsBorder = { bg = black },
+	TelescopeResultsTitle = { fg = black, bg = black },
+	TelescopeResultsNormal = { bg = black },
+
 }
 
 --[[ Step 5: Terminal Colors
