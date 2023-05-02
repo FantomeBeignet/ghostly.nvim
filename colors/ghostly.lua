@@ -81,12 +81,17 @@ emulator. Type errors in the definition will show up as LSP diagnostics.
 
 NOTE: |Replace-mode| will probably be useful here.
 ]]
-local black        = { '#2C253C', 235, 'black' }       --- @type ghostly.color.definition
-local gray         = { '#746B7E', 244, 'gray' }        --- @type ghostly.color.definition
-local gray_dark    = { '#5D566B', 236, 'darkgrey' }    --- @type ghostly.color.definition
-local gray_darker  = { '#454057', 239, 'gray' }        --- @type ghostly.color.definition
-local gray_light   = { '#8B8091', 250, 'gray' }        --- @type ghostly.color.definition
-local white        = { '#EEECEE', 231, 'white' }       --- @type ghostly.color.definition
+
+local bg_light	   = { '#2d2b3c', 238, 'darkgrey' }    --- @type ghostly.color.definition
+local bg	   = { '#292433', 237, 'darkgrey'}     --- @type ghostly.color.definition
+local bg_dark	   = { '#241d29', 236, 'darkgrey'}     --- @type ghostly.color.definition
+
+local black        = { '#161622', 235, 'black' }       --- @type ghostly.color.definition
+local gray         = { '#616171', 244, 'gray' }        --- @type ghostly.color.definition
+local gray_dark    = { '#535365', 239, 'darkgrey' }    --- @type ghostly.color.definition
+local gray_darker  = { '#464669', 242, 'gray' }        --- @type ghostly.color.definition
+local gray_light   = { '#6E6E7E', 250, 'gray' }        --- @type ghostly.color.definition
+local white        = { '#e1e2ea', 231, 'white' }       --- @type ghostly.color.definition
 
 local tan          = { '#f4c069', 221, 'yellow' }      --- @type ghostly.color.definition
 
@@ -333,7 +338,7 @@ colorscheme.highlight_all {
 	--[[ Editor UI ]]
 
 	-- Status Line
-	StatusLine = { fg = green_light, bg = gray_darker },
+	StatusLine = { bg = bg_light },
 	StatusLineNC = function(self) return { fg = gray, bg = self.StatusLine.bg } end,
 	StatusLineTerm = 'StatusLine',
 	StatusLineTermNC = 'StatusLineNC',
@@ -353,9 +358,9 @@ colorscheme.highlight_all {
 
 	-- Popups
 	FloatBorder = { fg = gray_dark },
-	Pmenu = { fg = gray_light, bg = gray_darker },
+	Pmenu = { bg = bg_light },
 	PmenuSbar = { bg = gray_darker },
-	PmenuSel = { fg = white, bg = gray },
+	PmenuSel = { bg = gray },
 	PmenuThumb = { bg = white },
 	WildMenu = 'PmenuSel',
 
@@ -1193,21 +1198,22 @@ colorscheme.highlight_all {
 
 	-- Telescope
 	TelescopeNormal = 'Normal',
-	TelescopeSelection = { fg = white, bg = gray_darker, italic = true },
-	TelescopeSelectionCaret = { fg = white, bg = gray_darker, bold = true },
-	TelescopeMultiSelection = { fg = gray_light, italic = true },
+	TelescopePromptCounter = 'Comment',
+	TelescopeSelection = { fg = white, bg = bg_light, italic = true },
+	TelescopeSelectionCaret = { fg = white, bg = bg_light, bold = true },
+	TelescopeMultiSelection = { fg = bg_light, italic = true },
 	TelescopeBorder = 'Normal',
 	TelescopeMatching = { fg = magenta_dark },
 	TelescopePromptPrefix = { fg = magenta_dark, bold = true },
-	TelescopePromptNormal = { bg = gray_darker },
-	TelescopePromptBorder = { bg = gray_darker },
-	TelescopePromptTitle = { fg = gray_darker, bg = gray_darker },
-	TelescopePreviewBorder = { bg = black },
-	TelescopePreviewTitle = { fg = black, bg = black },
-	TelescopePreviewNormal = { bg = black },
-	TelescopeResultsBorder = { bg = black },
-	TelescopeResultsTitle = { fg = black, bg = black },
-	TelescopeResultsNormal = { bg = black },
+	TelescopePromptNormal = { bg = bg_light },
+	TelescopePromptBorder = { bg = bg_light },
+	TelescopePromptTitle = { fg = bg_light, bg = bg_light },
+	TelescopePreviewBorder = { bg = bg_dark },
+	TelescopePreviewTitle = { fg = bg_dark, bg = bg_dark },
+	TelescopePreviewNormal = { bg = bg_dark },
+	TelescopeResultsBorder = { bg = bg_dark },
+	TelescopeResultsTitle = { fg = bg_dark, bg = bg_dark },
+	TelescopeResultsNormal = { bg = bg_dark },
 
 }
 
