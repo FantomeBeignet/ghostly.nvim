@@ -82,9 +82,9 @@ emulator. Type errors in the definition will show up as LSP diagnostics.
 NOTE: |Replace-mode| will probably be useful here.
 ]]
 
-local bg_light	   = { '#2d2b3c', 238, 'darkgrey' }    --- @type ghostly.color.definition
-local bg	   = { '#292433', 237, 'darkgrey'}     --- @type ghostly.color.definition
-local bg_dark	   = { '#241d29', 236, 'darkgrey'}     --- @type ghostly.color.definition
+local bg_light	   = { '#38384c', 238, 'darkgrey' }    --- @type ghostly.color.definition
+local bg	   = { '#2b2b40', 237, 'darkgrey'}     --- @type ghostly.color.definition
+local bg_dark	   = { '#242436', 236, 'darkgrey'}     --- @type ghostly.color.definition
 
 local black        = { '#161622', 235, 'black' }       --- @type ghostly.color.definition
 local gray         = { '#616171', 244, 'gray' }        --- @type ghostly.color.definition
