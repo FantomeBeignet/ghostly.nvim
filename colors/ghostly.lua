@@ -1215,6 +1215,63 @@ colorscheme.highlight_all {
 	TelescopeResultsTitle = { fg = bg_dark, bg = bg_dark },
 	TelescopeResultsNormal = { bg = bg_dark },
 
+	-- scrollbar.nvim
+	ScrollbarHandle = { bg = bg_light },
+	ScrollbarError = function(self)
+		return { fg = self.Error.fg }
+	end,
+	ScrollbarErrorHandle = function (self)
+		return { fg = self.ScrollbarError.fg, bg = self.ScrollbarHandle.bg }
+	end,
+	ScrollbarGitDelete = function(self)
+		return { fg = self.GitGutterDelete.fg }
+	end,
+	ScrollbarGitDeleteHandle = function (self)
+		return { fg = self.ScrollbarGitDelete.fg, bg = self.ScrollbarHandle.bg }
+	end,
+	ScrollbarHint = function(self)
+		return { fg = self.Hint.fg }
+	end,
+	ScrollbarHintHandle = function (self)
+		return { fg = self.ScrollbarHint.fg, bg = self.ScrollbarHandle.bg }
+	end,
+	ScrollbarGitAdd = function(self)
+		return { fg = self.GitGutterAdd.fg }
+	end,
+	ScrollbarGitAddHandle = function (self)
+		return { fg = self.ScrollbarGitAdd.fg, bg = self.ScrollbarHandle.bg }
+	end,
+	ScrollbarInfo = function(self)
+		return { fg = self.Info.fg }
+	end,
+	ScrollbarInfoHandle = function (self)
+		return { fg = self.ScrollbarInfo.fg, bg = self.ScrollbarHandle.bg }
+	end,
+	ScrollbarWarn = function(self)
+		return { fg = self.WarningMsg.fg }
+	end,
+	ScrollbarWarnHandle = function (self)
+		return { fg = self.ScrollbarWarn.fg, bg = self.ScrollbarHandle.bg }
+	end,
+	ScrollbarGitChange = function(self)
+		return { fg = self.GitGutterChange.fg }
+	end,
+	ScrollbarGitChangeHandle = function (self)
+		return { fg = self.ScrollbarGitChange.fg, bg = self.ScrollbarHandle.bg }
+	end,
+	ScrollbarSearch = { fg = pink_light},
+	ScrollbarSearchHandle = function (self)
+		return { fg = self.ScrollbarSearch.fg, bg = self.ScrollbarHandle.bg }
+	end,
+	ScrollbarCursor = function(self)
+		return { fg = self.Normal.fg }
+	end,
+	ScrollbarCursorHandle = function (self)
+		return { fg = self.ScrollbarCursor.fg, bg = self.ScrollbarHandle.bg }
+	end,
+	ScrollbarMisc = 'ScrollbarCursor',
+	ScrollbarMiscHandle = 'ScrollbarCursorHandle',
+
 }
 
 --[[ Step 5: Terminal Colors
