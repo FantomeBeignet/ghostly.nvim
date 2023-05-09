@@ -53,10 +53,10 @@ In this step you will define information that helps Neovim process:
 2. How your colorscheme should be rendered.
 ]]
 -- This is the name of your colorscheme which will be used as per |g:colors_name|.
-local colorscheme_name = 'ghostly'
+local colorscheme_name = "ghostly"
 
 -- WARN: users shouldn't touch this.
-vim.api.nvim_set_var('colors_name', colorscheme_name)
+vim.api.nvim_set_var("colors_name", colorscheme_name)
 
 --[[ Step 3: Colors
 Here you define all of the colors that you will use for the color scheme. Each one is made up of three parts:
@@ -82,44 +82,44 @@ emulator. Type errors in the definition will show up as LSP diagnostics.
 NOTE: |Replace-mode| will probably be useful here.
 ]]
 
-local bg_light	   = { '#38384c', 238, 'darkgrey' }    --- @type ghostly.color.definition
-local bg	   = { '#2b2b40', 237, 'darkgrey'}     --- @type ghostly.color.definition
-local bg_dark	   = { '#242436', 236, 'darkgrey'}     --- @type ghostly.color.definition
+local bg_light = { "#38384c", 238, "darkgrey" } --- @type ghostly.color.definition
+local bg = { "#2b2b40", 237, "darkgrey" } --- @type ghostly.color.definition
+local bg_dark = { "#242436", 236, "darkgrey" } --- @type ghostly.color.definition
 
-local black        = { '#161622', 235, 'black' }       --- @type ghostly.color.definition
-local gray         = { '#616171', 244, 'gray' }        --- @type ghostly.color.definition
-local gray_dark    = { '#535365', 239, 'darkgrey' }    --- @type ghostly.color.definition
-local gray_darker  = { '#464669', 242, 'gray' }        --- @type ghostly.color.definition
-local gray_light   = { '#6E6E7E', 250, 'gray' }        --- @type ghostly.color.definition
-local white        = { '#e1e2ea', 231, 'white' }       --- @type ghostly.color.definition
+local black = { "#161622", 235, "black" } --- @type ghostly.color.definition
+local gray = { "#616171", 244, "gray" } --- @type ghostly.color.definition
+local gray_dark = { "#535365", 239, "darkgrey" } --- @type ghostly.color.definition
+local gray_darker = { "#464669", 242, "gray" } --- @type ghostly.color.definition
+local gray_light = { "#6E6E7E", 250, "gray" } --- @type ghostly.color.definition
+local white = { "#e1e2ea", 231, "white" } --- @type ghostly.color.definition
 
-local tan          = { '#f4c069', 221, 'yellow' }      --- @type ghostly.color.definition
+local tan = { "#f4c069", 221, "yellow" } --- @type ghostly.color.definition
 
-local red          = { '#d08092', 203, 'red' }         --- @type ghostly.color.definition
-local red_dark     = { '#cc7588', 124, 'darkred' }     --- @type ghostly.color.definition
-local red_light    = { '#d897a5', 205, 'red' }         --- @type ghostly.color.definition
+local red = { "#d08092", 203, "red" } --- @type ghostly.color.definition
+local red_dark = { "#cc7588", 124, "darkred" } --- @type ghostly.color.definition
+local red_light = { "#d897a5", 205, "red" } --- @type ghostly.color.definition
 
-local orange       = { '#e5aa8a', 208, 'darkyellow' }  --- @type ghostly.color.definition
-local orange_light = { '#09b69b', 214, 'darkyellow' }  --- @type ghostly.color.definition
+local orange = { "#e5aa8a", 208, "darkyellow" } --- @type ghostly.color.definition
+local orange_light = { "#09b69b", 214, "darkyellow" } --- @type ghostly.color.definition
 
-local yellow       = { '#dacd8b', 227, 'yellow' }      --- @type ghostly.color.definition
+local yellow = { "#dacd8b", 227, "yellow" } --- @type ghostly.color.definition
 
-local green_dark   = { '#89be9d', 113, 'darkgreen' }   --- @type ghostly.color.definition
-local green        = { '#99c7ab', 46,  'green' }        --- @type ghostly.color.definition
-local green_light  = { '#a6ceb5', 120, 'green' }       --- @type ghostly.color.definition
-local turqoise     = { '#87c3bf', 48,  'green' }        --- @type ghostly.color.definition
+local green_dark = { "#89be9d", 113, "darkgreen" } --- @type ghostly.color.definition
+local green = { "#99c7ab", 46, "green" } --- @type ghostly.color.definition
+local green_light = { "#a6ceb5", 120, "green" } --- @type ghostly.color.definition
+local turqoise = { "#87c3bf", 48, "green" } --- @type ghostly.color.definition
 
-local blue         = { '#5678c2', 63,  'darkblue' }     --- @type ghostly.color.definition
-local cyan         = { '#80bfd1', 80,  'cyan' }         --- @type ghostly.color.definition
-local ice          = { '#98aedd', 111, 'cyan' }        --- @type ghostly.color.definition
-local teal         = { '#90c5b5', 75,  'blue' }         --- @type ghostly.color.definition
+local blue = { "#5678c2", 63, "darkblue" } --- @type ghostly.color.definition
+local cyan = { "#80bfd1", 80, "cyan" } --- @type ghostly.color.definition
+local ice = { "#98aedd", 111, "cyan" } --- @type ghostly.color.definition
+local teal = { "#90c5b5", 75, "blue" } --- @type ghostly.color.definition
 
-local magenta      = { '#b08cc5', 168, 'magenta' }     --- @type ghostly.color.definition
-local magenta_dark = { '#ab85c1', 126, 'darkmagenta' } --- @type ghostly.color.definition
-local pink         = { '#d9b1be', 219, 'magenta' }     --- @type ghostly.color.definition
-local pink_light   = { '#ddbbc6', 217, 'white' }       --- @type ghostly.color.definition
-local purple       = { '#b678c4', 171, 'magenta' }     --- @type ghostly.color.definition
-local purple_light = { '#c28ecd', 133, 'darkmagenta' } --- @type ghostly.color.definition
+local magenta = { "#b08cc5", 168, "magenta" } --- @type ghostly.color.definition
+local magenta_dark = { "#ab85c1", 126, "darkmagenta" } --- @type ghostly.color.definition
+local pink = { "#d9b1be", 219, "magenta" } --- @type ghostly.color.definition
+local pink_light = { "#ddbbc6", 217, "white" } --- @type ghostly.color.definition
+local purple = { "#b678c4", 171, "magenta" } --- @type ghostly.color.definition
+local purple_light = { "#c28ecd", 133, "darkmagenta" } --- @type ghostly.color.definition
 
 --[[ Step 4: highlights
 You can define highlight groups like this:
@@ -245,20 +245,20 @@ local colorscheme = require(colorscheme_name)
 
 --[[ These are the ones you should edit.
      TIP: you can use `colors.black`, etc to access what you defined in the other file. ]]
-colorscheme.highlight_all {
+colorscheme.highlight_all({
 	--[[ Plaintext ]]
 
 	-- Basic styles
 	Bold = { bold = true },
 	Italic = { italic = true },
 	Normal = { fg = white },
-	Title = 'Bold',
+	Title = "Bold",
 	Underlined = { fg = white, underline = true },
-	Whitespace = 'NonText',
+	Whitespace = "NonText",
 
 	-- "Non"-text
-	Conceal = 'NonText',
-	EndOfBuffer = 'NonText',
+	Conceal = "NonText",
+	EndOfBuffer = "NonText",
 	Ignore = { fg = gray },
 	NonText = { fg = gray_dark },
 
@@ -266,27 +266,27 @@ colorscheme.highlight_all {
 	Constant = { fg = ice },
 	String = { fg = ice },
 	Character = { fg = ice },
-	Number = 'Normal',
+	Number = "Normal",
 	Boolean = { fg = red_light },
-	Float = 'Number',
+	Float = "Number",
 
 	-- Syntax
 	Comment = { fg = gray, italic = true },
 	Conditional = { fg = ice, italic = true },
-	Debug = 'WarningMsg',
-	Delimiter = 'Normal',
+	Debug = "WarningMsg",
+	Delimiter = "Normal",
 	Exception = { fg = red, bold = true },
 	Function = { fg = magenta },
-	Identifier = 'Normal',
+	Identifier = "Normal",
 	Keyword = { fg = purple, italic = true },
 	Label = { fg = pink, bold = true },
-	Noise = 'Delimiter',
-	Operator = 'Normal',
+	Noise = "Delimiter",
+	Operator = "Normal",
 	Repeat = { fg = turqoise, italic = true },
 	Statement = { fg = ice },
 	StorageClass = { fg = orange_light, bold = true },
 	Structure = { fg = blue, bold = true },
-	Tag = 'Underlined',
+	Tag = "Underlined",
 	Type = { fg = cyan },
 	Typedef = { fg = cyan, italic = true },
 
@@ -301,58 +301,82 @@ colorscheme.highlight_all {
 	Special = { fg = magenta, bold = true },
 	SpecialChar = { fg = red_light, italic = true },
 	SpecialComment = { fg = gray, bold = true, nocombine = true },
-	SpecialKey = 'Character',
+	SpecialKey = "Character",
 
 	-- LSP
-	['@lsp.mod.constant'] = '@constant',
-	['@lsp.mod.readonly'] = '@lsp.mod.constant',
-	['@lsp.type.boolean'] = '@boolean',
-	['@lsp.type.character'] = '@character',
-	['@lsp.type.float'] = '@float',
-	['@lsp.type.interface'] = '@lsp.type.type',
-	['@lsp.type.namespace'] = '@namespace',
-	['@lsp.type.number'] = '@number',
-	['@lsp.type.operator'] = '@operator',
-	['@lsp.type.string'] = '@string',
+	["@lsp.mod.constant"] = "@constant",
+	["@lsp.mod.readonly"] = "@lsp.mod.constant",
+	["@lsp.type.boolean"] = "@boolean",
+	["@lsp.type.character"] = "@character",
+	["@lsp.type.float"] = "@float",
+	["@lsp.type.interface"] = "@lsp.type.type",
+	["@lsp.type.namespace"] = "@namespace",
+	["@lsp.type.number"] = "@number",
+	["@lsp.type.operator"] = "@operator",
+	["@lsp.type.string"] = "@string",
 
 	-- treesitter
-	['@constant.builtin'] = '@constant',
-	['@constant.macro'] = '@define',
-	['@constructor'] = '@function',
-	['@function.builtin'] = '@function',
-	['@method.call'] = '@function',
-	['@function.macro'] = '@macro',
-	['@namespace'] = 'Directory',
-	['@string.escape'] = '@string.special',
-	['@tag'] = 'Tag',
-	['@text.danger'] = 'ErrorMsg',
-	['@text.literal'] = 'mkdCode',
-	['@text.uri'] = 'Underlined',
-	['@text.warning'] = 'WarningMsg',
-	['@variable'] = 'Normal',
-	['@field'] = 'Normal',
-	['@punctuation.braces'] = 'Normal',
-	['@punctuation.bracket'] = 'Normal',
-	['@punctuation.delimiter'] = 'Normal',
+	["@constant.builtin"] = "@constant",
+	["@constant.macro"] = "@define",
+	["@constructor"] = "@function",
+	["@function.builtin"] = "@function",
+	["@method.call"] = "@function",
+	["@function.macro"] = "@macro",
+	["@namespace"] = "Directory",
+	["@string.escape"] = "@string.special",
+	["@tag"] = "Tag",
+	["@text.danger"] = "ErrorMsg",
+	["@text.literal"] = "mkdCode",
+	["@text.uri"] = "Underlined",
+	["@text.warning"] = "WarningMsg",
+	["@variable"] = "Normal",
+	["@field"] = "Normal",
+	["@punctuation.braces"] = "Normal",
+	["@punctuation.bracket"] = "Normal",
+	["@punctuation.delimiter"] = "Normal",
 
 	--[[ Editor UI ]]
 
 	-- Status Line
 	StatusLine = { bg = bg_light },
-	StatusLineNC = function(self) return { fg = gray, bg = self.StatusLine.bg } end,
-	StatusLineTerm = 'StatusLine',
-	StatusLineTermNC = 'StatusLineNC',
+	StatusLineNC = function(self)
+		return { fg = gray, bg = self.StatusLine.bg }
+	end,
+	StatusLineTerm = function(self)
+		return { fg = orange, bg = self.StatusLine.bg }
+	end,
+	StatusLineTermNC = function(self)
+		return { fg = orange, bg = self.StatusLineNC.bg }
+	end,
+	StatusLineNormal = { fg = green_dark },
+	StatusLineInsert = { fg = ice },
+	StatusLineVisual = { fg = magenta },
+	StatusLineReplace = { fg = red },
+	StatusLineCommand = { fg = yellow },
+	StatusLineInactive = function(self)
+		return { fg = self.Comment.fg }
+	end,
 
 	-- Tabline
-	TabLine = function(self) return { fg = self.Normal.fg, bg = self.StatusLine.bg } end,
-	TabLineFill = function(self) return { fg = self.TabLine.bg, bg = black } end,
-	TabLineSel = function(self) return { fg = self.TabLine.fg, bg = self.Normal.bg } end,
+	TabLine = function(self)
+		return { fg = self.Normal.fg, bg = self.StatusLine.bg }
+	end,
+	TabLineFill = function(self)
+		return { fg = self.TabLine.bg, bg = black }
+	end,
+	TabLineSel = function(self)
+		return { fg = self.TabLine.fg, bg = self.Normal.bg }
+	end,
 
 	-- Line Highlighting
 	CursorLine = { bg = gray_darker },
-	CursorLineNr = function(self) return { fg = magenta_dark, bg = self.LineNr.bg } end,
+	CursorLineNr = function(self)
+		return { fg = magenta_dark, bg = self.LineNr.bg }
+	end,
 	LineNr = { fg = gray },
-	QuickFixLine = function(self) return { bg = self.StatusLine.bg } end,
+	QuickFixLine = function(self)
+		return { bg = self.StatusLine.bg }
+	end,
 	Visual = { bg = gray_dark },
 	VisualNOS = { bg = gray_darker },
 
@@ -362,7 +386,7 @@ colorscheme.highlight_all {
 	PmenuSbar = { bg = gray_darker },
 	PmenuSel = { bg = gray },
 	PmenuThumb = { bg = white },
-	WildMenu = 'PmenuSel',
+	WildMenu = "PmenuSel",
 
 	-- Folds
 	FoldColumn = { bg = gray_darker, bold = true },
@@ -370,11 +394,15 @@ colorscheme.highlight_all {
 
 	-- Diffs
 	DiffAdd = { fg = black, bg = green_dark },
-	diffAdded = 'DiffAdd',
+	diffAdded = "DiffAdd",
 	DiffChange = {},
-	DiffDelete = function(self) return { fg = self.DiffAdd.fg, bg = red } end,
-	DiffText = function(self) return { fg = self.DiffAdd.fg, bg = yellow } end,
-	diffRemoved = 'DiffDelete',
+	DiffDelete = function(self)
+		return { fg = self.DiffAdd.fg, bg = red }
+	end,
+	DiffText = function(self)
+		return { fg = self.DiffAdd.fg, bg = yellow }
+	end,
+	diffRemoved = "DiffDelete",
 
 	-- Searching
 	IncSearch = { reverse = true },
@@ -398,28 +426,28 @@ colorscheme.highlight_all {
 	Question = { fg = blue, underline = true },
 	Todo = { fg = black, bg = blue, bold = true },
 	WarningMsg = { fg = orange, bold = true },
-	Hint =  { fg = magenta, italic = true },
-	Info =  { fg = blue, italic = true },
+	Hint = { fg = magenta, italic = true },
+	Info = { fg = blue, italic = true },
 
 	-- Diagnostics
-	debugBreakpoint = 'ErrorMsg',
-	debugPC = 'ColorColumn',
+	debugBreakpoint = "ErrorMsg",
+	debugPC = "ColorColumn",
 
-	DiagnosticError = 'ErrorMsg',
-	DiagnosticFloatingError = 'ErrorMsg',
-	DiagnosticSignError = 'DiagnosticFloatingError',
+	DiagnosticError = "ErrorMsg",
+	DiagnosticFloatingError = "ErrorMsg",
+	DiagnosticSignError = "DiagnosticFloatingError",
 
-	DiagnosticWarn = 'WarningMsg',
-	DiagnosticFloatingWarn = 'WarningMsg',
-	DiagnosticSignWarn = 'DiagnosticFloatingWarn',
+	DiagnosticWarn = "WarningMsg",
+	DiagnosticFloatingWarn = "WarningMsg",
+	DiagnosticSignWarn = "DiagnosticFloatingWarn",
 
-	DiagnosticHint = 'Hint',
-	DiagnosticFloatingHint = 'Hint',
-	DiagnosticSignHint = 'DiagnosticFloatingHint',
+	DiagnosticHint = "Hint",
+	DiagnosticFloatingHint = "Hint",
+	DiagnosticSignHint = "DiagnosticFloatingHint",
 
-	DiagnosticInfo = 'Info',
-	DiagnosticFloatingInfo = 'Info',
-	DiagnosticSignInfo = 'DiagnosticFloatingInfo',
+	DiagnosticInfo = "Info",
+	DiagnosticFloatingInfo = "Info",
+	DiagnosticSignInfo = "DiagnosticFloatingInfo",
 
 	DiagnosticUnderlineError = { sp = red, undercurl = true },
 	DiagnosticUnderlineHint = { sp = magenta, undercurl = true },
@@ -428,7 +456,7 @@ colorscheme.highlight_all {
 
 	-- Cursor
 	Cursor = { reverse = true },
-	CursorIM = 'Cursor',
+	CursorIM = "Cursor",
 	CursorColumn = { bg = gray_dark },
 
 	-- Misc
@@ -441,470 +469,472 @@ colorscheme.highlight_all {
 		missing. ]]
 
 	-- Coq
-	coqConstructor = 'Constant',
-	coqDefBinderType = 'coqDefType',
-	coqDefContents1 = 'coqConstructor',
-	coqDefType = 'Typedef',
-	coqIndBinderTerm = 'coqDefBinderType',
-	coqIndConstructor = 'Delimiter',
-	coqIndTerm = 'Type',
-	coqKwd = 'Keyword',
-	coqKwdParen = 'Function',
-	coqProofDelim = 'coqVernacCmd',
-	coqProofDot = 'coqTermPunctuation',
-	coqProofPunctuation = 'coqTermPunctuation',
-	coqRequire = 'Include',
-	coqTactic = 'Operator',
-	coqTermPunctuation = 'Delimiter',
-	coqVernacCmd = 'Statement',
-	coqVernacPunctuation = 'coqTermPunctuation',
+	coqConstructor = "Constant",
+	coqDefBinderType = "coqDefType",
+	coqDefContents1 = "coqConstructor",
+	coqDefType = "Typedef",
+	coqIndBinderTerm = "coqDefBinderType",
+	coqIndConstructor = "Delimiter",
+	coqIndTerm = "Type",
+	coqKwd = "Keyword",
+	coqKwdParen = "Function",
+	coqProofDelim = "coqVernacCmd",
+	coqProofDot = "coqTermPunctuation",
+	coqProofPunctuation = "coqTermPunctuation",
+	coqRequire = "Include",
+	coqTactic = "Operator",
+	coqTermPunctuation = "Delimiter",
+	coqVernacCmd = "Statement",
+	coqVernacPunctuation = "coqTermPunctuation",
 
 	-- C++
-	cppSTLexception = 'Exception',
-	cppSTLnamespace = 'Directory',
+	cppSTLexception = "Exception",
+	cppSTLnamespace = "Directory",
 
 	-- Crontab
-	crontabDay = 'StorageClass',
-	crontabDow = 'String',
-	crontabHr = 'Number',
-	crontabMin = 'Float',
-	crontabMnth = 'Structure',
+	crontabDay = "StorageClass",
+	crontabDow = "String",
+	crontabHr = "Number",
+	crontabMin = "Float",
+	crontabMnth = "Structure",
 
 	-- C#
-	csBraces = 'Delimiter',
-	csClass = 'Structure',
-	csClassType = 'Type',
-	csContextualStatement = 'Conditional',
-	csEndColon = 'Delimiter',
-	csGeneric = 'Typedef',
-	csInterpolation = 'Include',
-	csInterpolationDelimiter = 'SpecialChar',
-	csLogicSymbols = 'Operator',
-	csModifier = 'Keyword',
-	csNew = 'Operator',
-	csNewType = 'Type',
-	csParens = 'Delimiter',
-	csPreCondit = 'PreProc',
-	csQuote = 'Delimiter',
-	csRepeat = 'Repeat',
-	csStorage = 'StorageClass',
-	csUnspecifiedStatement = 'Statement',
-	csXmlTag = 'Define',
-	csXmlTagName = 'Define',
+	csBraces = "Delimiter",
+	csClass = "Structure",
+	csClassType = "Type",
+	csContextualStatement = "Conditional",
+	csEndColon = "Delimiter",
+	csGeneric = "Typedef",
+	csInterpolation = "Include",
+	csInterpolationDelimiter = "SpecialChar",
+	csLogicSymbols = "Operator",
+	csModifier = "Keyword",
+	csNew = "Operator",
+	csNewType = "Type",
+	csParens = "Delimiter",
+	csPreCondit = "PreProc",
+	csQuote = "Delimiter",
+	csRepeat = "Repeat",
+	csStorage = "StorageClass",
+	csUnspecifiedStatement = "Statement",
+	csXmlTag = "Define",
+	csXmlTagName = "Define",
 
 	-- CSS/SCSS
-	cssAtRule = 'PreCondit',
-	cssAttr = 'Keyword',
-	cssAttrComma = 'Noise',
-	cssAttrRegion = 'Keyword',
-	cssBraces = 'Delimiter',
-	cssClassName = 'Identifier',
-	cssClassNameDot = 'Noise',
-	cssFlexibleBoxAttr = 'cssAttr',
-	cssFunctionComma = 'Noise',
-	cssImportant = 'Exception',
-	cssNoise = 'Noise',
-	cssProp = 'Label',
-	cssPseudoClass = 'Special',
-	cssPseudoClassId = 'cssSelectorOp',
-	cssSelectorOp = 'Operator',
-	cssTagName = 'Structure',
-	cssUnitDecorators = 'Type',
+	cssAtRule = "PreCondit",
+	cssAttr = "Keyword",
+	cssAttrComma = "Noise",
+	cssAttrRegion = "Keyword",
+	cssBraces = "Delimiter",
+	cssClassName = "Identifier",
+	cssClassNameDot = "Noise",
+	cssFlexibleBoxAttr = "cssAttr",
+	cssFunctionComma = "Noise",
+	cssImportant = "Exception",
+	cssNoise = "Noise",
+	cssProp = "Label",
+	cssPseudoClass = "Special",
+	cssPseudoClassId = "cssSelectorOp",
+	cssSelectorOp = "Operator",
+	cssTagName = "Structure",
+	cssUnitDecorators = "Type",
 
 	-- dart
-	dartLibrary = 'Statement',
+	dartLibrary = "Statement",
 
 	-- dos INI
-	dosiniHeader = 'Title',
-	dosiniLabel = 'Label',
+	dosiniHeader = "Title",
+	dosiniLabel = "Label",
 
 	-- dot
-	dotKeyChar = 'Character',
-	dotType = 'Type',
+	dotKeyChar = "Character",
+	dotType = "Type",
 
 	-- Git
-	gitcommitHeader = 'SpecialComment',
-	gitcommitDiscardedFile = 'gitcommitSelectedFile',
-	gitcommitOverFlow = 'Error',
-	gitcommitSelectedFile = 'Directory',
-	gitcommitSummary = 'Title',
-	gitcommitUntrackedFile = 'gitcommitSelectedFile',
-	gitconfigAssignment = 'String',
-	gitconfigEscape = 'SpecialChar',
-	gitconfigNone = 'Operator',
-	gitconfigSection = 'Structure',
-	gitconfigVariable = 'Label',
-	gitrebaseBreak = 'Keyword',
-	gitrebaseCommit = 'Tag',
-	gitrebaseDrop = 'Exception',
-	gitrebaseEdit = 'Define',
-	gitrebaseExec = 'PreProc',
-	gitrebaseFixup = 'gitrebaseSquash',
-	gitrebaseMerge = 'PreProc',
-	gitrebasePick = 'Include',
-	gitrebaseReset = 'gitrebaseLabel',
-	gitrebaseReword = 'gitrebasePick',
-	gitrebaseSquash = 'Macro',
-	gitrebaseSummary = 'Title',
+	gitcommitHeader = "SpecialComment",
+	gitcommitDiscardedFile = "gitcommitSelectedFile",
+	gitcommitOverFlow = "Error",
+	gitcommitSelectedFile = "Directory",
+	gitcommitSummary = "Title",
+	gitcommitUntrackedFile = "gitcommitSelectedFile",
+	gitconfigAssignment = "String",
+	gitconfigEscape = "SpecialChar",
+	gitconfigNone = "Operator",
+	gitconfigSection = "Structure",
+	gitconfigVariable = "Label",
+	gitrebaseBreak = "Keyword",
+	gitrebaseCommit = "Tag",
+	gitrebaseDrop = "Exception",
+	gitrebaseEdit = "Define",
+	gitrebaseExec = "PreProc",
+	gitrebaseFixup = "gitrebaseSquash",
+	gitrebaseMerge = "PreProc",
+	gitrebasePick = "Include",
+	gitrebaseReset = "gitrebaseLabel",
+	gitrebaseReword = "gitrebasePick",
+	gitrebaseSquash = "Macro",
+	gitrebaseSummary = "Title",
 
 	-- Go
-	goBlock = 'Delimiter',
-	goBoolean = 'Boolean',
-	goBuiltins = 'Function',
-	goField = 'Normal',
-	goFloat = 'Float',
-	goFormatSpecifier = 'Character',
-	goFunction = 'Normal',
-	goFunctionCall = 'Function',
+	goBlock = "Delimiter",
+	goBoolean = "Boolean",
+	goBuiltins = "Function",
+	goField = "Normal",
+	goFloat = "Float",
+	goFormatSpecifier = "Character",
+	goFunction = "Normal",
+	goFunctionCall = "Function",
 	goFunctionReturn = {},
-	goImport = 'Include',
-	goMethodCall = 'goFunctionCall',
-	goPackage = 'goStatement',
-	goParamType = 'goReceiverType',
-	goPointerOperator = 'StorageClass',
-	goPredefinedIdentifiers = 'Constant',
-	goReceiver = 'goBlock',
-	goReceiverType = 'goTypeName',
-	goSimpleParams = 'goBlock',
-	goStatement = 'Keyword',
-	goType = 'Type',
-	goTypeConstructor = 'goFunction',
-	goTypeName = 'Type',
-	goVarAssign = 'Identifier',
-	goVarDefs = 'goVarAssign',
+	goImport = "Include",
+	goMethodCall = "goFunctionCall",
+	goPackage = "goStatement",
+	goParamType = "goReceiverType",
+	goPointerOperator = "StorageClass",
+	goPredefinedIdentifiers = "Constant",
+	goReceiver = "goBlock",
+	goReceiverType = "goTypeName",
+	goSimpleParams = "goBlock",
+	goStatement = "Keyword",
+	goType = "Type",
+	goTypeConstructor = "goFunction",
+	goTypeName = "Type",
+	goVarAssign = "Identifier",
+	goVarDefs = "goVarAssign",
 
 	-- Help
-	helpCommand = 'Statement',
-	helpHeader = 'Label',
-	helpHeadline = 'Title',
-	helpHyperTextJump = 'Tag',
-	helpHyperTextEntry = 'Tag',
-	helpExample = 'Statement',
-	helpNote = 'DiagnosticHint',
-	helpOption = 'Keyword',
-	helpSectionDelim = 'Delimiter',
+	helpCommand = "Statement",
+	helpHeader = "Label",
+	helpHeadline = "Title",
+	helpHyperTextJump = "Tag",
+	helpHyperTextEntry = "Tag",
+	helpExample = "Statement",
+	helpNote = "DiagnosticHint",
+	helpOption = "Keyword",
+	helpSectionDelim = "Delimiter",
 
 	-- HTML
-	htmlArg = 'Label',
-	htmlBold = 'Bold',
-	htmlTitle = 'htmlBold',
-	htmlEndTag = 'htmlTag',
-	htmlH1 = 'markdownH1',
-	htmlH2 = 'markdownH2',
-	htmlH3 = 'markdownH3',
-	htmlH4 = 'markdownH4',
-	htmlH5 = 'markdownH5',
-	htmlH6 = 'markdownH6',
-	htmlItalic = 'Italic',
-	htmlSpecialTagName = 'Keyword',
-	htmlTag = 'Special',
-	htmlTagN = 'Typedef',
-	htmlTagName = 'Type',
+	htmlArg = "Label",
+	htmlBold = "Bold",
+	htmlTitle = "htmlBold",
+	htmlEndTag = "htmlTag",
+	htmlH1 = "markdownH1",
+	htmlH2 = "markdownH2",
+	htmlH3 = "markdownH3",
+	htmlH4 = "markdownH4",
+	htmlH5 = "markdownH5",
+	htmlH6 = "markdownH6",
+	htmlItalic = "Italic",
+	htmlSpecialTagName = "Keyword",
+	htmlTag = "Special",
+	htmlTagN = "Typedef",
+	htmlTagName = "Type",
 
 	-- i3config
-	i3ConfigAction = 'Function',
-	i3ConfigAssignKeyword = 'Keyword',
-	i3ConfigAssign = 'i3ConfigVariable',
-	i3ConfigBind = '@text',
-	i3ConfigBindKeyword = 'Keyword',
-	i3ConfigBlockKeyword = 'Keyword',
-	i3ConfigBorderKeyword = 'Keyword',
-	i3ConfigBorderStyleKeyword = 'Keyword',
-	i3ConfigClientColorKeyword = 'Keyword',
-	i3ConfigCommandKeyword = 'Keyword',
-	i3ConfigDelayUrgencyKeyword = 'Keyword',
-	i3ConfigDrawingMarksKeyword = 'Keyword',
-	i3ConfigEdgeKeyword = 'Keyword',
-	i3ConfigExec = 'Statement',
-	i3ConfigExecKeyword = 'Keyword',
-	i3ConfigFloating = 'Keyword',
-	i3ConfigFocusFollowsMouseKeyword = 'Keyword',
-	i3ConfigFocusOnActivationKeyword = 'Keyword',
-	i3ConfigFocusWrappingKeyword = 'Keyword',
-	i3ConfigFontContent = 'String',
-	i3ConfigFontKeyword = 'Keyword',
-	i3ConfigFontSeparator = 'Delimiter',
-	i3ConfigFontSize = 'i3ConfigNumber',
-	i3ConfigForceXineramaKeyword = 'Keyword',
-	i3ConfigGapStyleKeyword = 'Keyword',
-	i3ConfigInitialize = 'String',
-	i3ConfigInitializeKeyword = 'Keyword',
-	i3ConfigInterprocessKeyword = 'Keyword',
-	i3ConfigLayoutKeyword = 'Keyword',
-	i3ConfigMouseWarpingKeyword = 'Keyword',
-	i3ConfigNoFocusKeyword = 'Keyword',
-	i3ConfigNoStartupId = 'i3ConfigBindArgument',
-	i3ConfigNumber = 'Number',
-	i3ConfigOrientationKeyword = 'Keyword',
-	i3ConfigPopupOnFullscreenKeyword = 'Keyword',
-	i3ConfigResourceKeyword = 'Keyword',
-	i3ConfigSmartBorderKeyword = 'Keyword',
-	i3ConfigSmartGapKeyword = 'Keyword',
-	i3ConfigString = 'String',
-	i3ConfigTitleAlignKeyword = 'Keyword',
-	i3ConfigVariable = 'Define',
-	i3ConfigVariableAndModifier = 'Character',
-	i3ConfigVariableModifier = 'Operator',
-	i3ConfigWindowCommandSpecial = 'htmlTag',
-	i3ConfigWorkspaceKeyword = 'Keyword',
+	i3ConfigAction = "Function",
+	i3ConfigAssignKeyword = "Keyword",
+	i3ConfigAssign = "i3ConfigVariable",
+	i3ConfigBind = "@text",
+	i3ConfigBindKeyword = "Keyword",
+	i3ConfigBlockKeyword = "Keyword",
+	i3ConfigBorderKeyword = "Keyword",
+	i3ConfigBorderStyleKeyword = "Keyword",
+	i3ConfigClientColorKeyword = "Keyword",
+	i3ConfigCommandKeyword = "Keyword",
+	i3ConfigDelayUrgencyKeyword = "Keyword",
+	i3ConfigDrawingMarksKeyword = "Keyword",
+	i3ConfigEdgeKeyword = "Keyword",
+	i3ConfigExec = "Statement",
+	i3ConfigExecKeyword = "Keyword",
+	i3ConfigFloating = "Keyword",
+	i3ConfigFocusFollowsMouseKeyword = "Keyword",
+	i3ConfigFocusOnActivationKeyword = "Keyword",
+	i3ConfigFocusWrappingKeyword = "Keyword",
+	i3ConfigFontContent = "String",
+	i3ConfigFontKeyword = "Keyword",
+	i3ConfigFontSeparator = "Delimiter",
+	i3ConfigFontSize = "i3ConfigNumber",
+	i3ConfigForceXineramaKeyword = "Keyword",
+	i3ConfigGapStyleKeyword = "Keyword",
+	i3ConfigInitialize = "String",
+	i3ConfigInitializeKeyword = "Keyword",
+	i3ConfigInterprocessKeyword = "Keyword",
+	i3ConfigLayoutKeyword = "Keyword",
+	i3ConfigMouseWarpingKeyword = "Keyword",
+	i3ConfigNoFocusKeyword = "Keyword",
+	i3ConfigNoStartupId = "i3ConfigBindArgument",
+	i3ConfigNumber = "Number",
+	i3ConfigOrientationKeyword = "Keyword",
+	i3ConfigPopupOnFullscreenKeyword = "Keyword",
+	i3ConfigResourceKeyword = "Keyword",
+	i3ConfigSmartBorderKeyword = "Keyword",
+	i3ConfigSmartGapKeyword = "Keyword",
+	i3ConfigString = "String",
+	i3ConfigTitleAlignKeyword = "Keyword",
+	i3ConfigVariable = "Define",
+	i3ConfigVariableAndModifier = "Character",
+	i3ConfigVariableModifier = "Operator",
+	i3ConfigWindowCommandSpecial = "htmlTag",
+	i3ConfigWorkspaceKeyword = "Keyword",
 
 	-- Java
-	javaClassDecl = 'Structure',
+	javaClassDecl = "Structure",
 
 	-- JavaScript
-	jsFuncBlock = 'Function',
-	jsObjectKey = 'Type',
-	jsReturn = 'Keyword',
-	jsVariableDef = 'Identifier',
+	jsFuncBlock = "Function",
+	jsObjectKey = "Type",
+	jsReturn = "Keyword",
+	jsVariableDef = "Identifier",
 
 	-- JSON
-	jsonBraces = 'luaBraces',
-	jsonEscape = 'SpecialChar',
-	jsonKeywordMatch = 'Operator',
-	jsonNull = 'Constant',
-	jsonQuote = 'Delimiter',
-	jsonString = 'String',
-	jsonStringSQError = 'Exception',
+	jsonBraces = "luaBraces",
+	jsonEscape = "SpecialChar",
+	jsonKeywordMatch = "Operator",
+	jsonNull = "Constant",
+	jsonQuote = "Delimiter",
+	jsonString = "String",
+	jsonStringSQError = "Exception",
 
 	-- Lua
-	['@lsp.type.function.lua'] = {},
-	['@lsp.type.keyword.lua'] = 'SpecialComment',
-	['@lsp.typemod.function.declaration.lua'] = '@lsp.type.function',
-	['@lsp.typemod.variable.defaultLibrary.lua'] = '@lsp.type.class.lua',
-	['@lsp.typemod.variable.definition.lua'] = '@punctuation',
-	luaBraces = 'Delimiter',
-	luaBrackets = 'Delimiter',
-	luaBuiltin = 'Keyword',
-	luaComma = 'Delimiter',
-	luaDocTag = 'SpecialComment',
-	luaFuncArgName = 'Identifier',
-	luaFuncCall = 'Function',
-	luaFuncId = 'luaNoise',
-	luaFuncKeyword = 'Type',
-	luaFuncName = 'Function',
-	luaFuncParens = 'Delimiter',
-	luaFuncTable = 'Structure',
-	luaFunction = 'Keyword',
-	luaGotoLabel = 'luaLabel',
-	luaIn = 'luaRepeat',
-	luaLocal = 'Keyword',
-	luaNoise = 'Delimiter',
-	luaParens = 'Delimiter',
-	luaSpecialTable = 'Structure',
-	luaSpecialValue = 'Function',
-	luaStatement = 'Keyword',
+	["@lsp.type.function.lua"] = {},
+	["@lsp.type.keyword.lua"] = "SpecialComment",
+	["@lsp.typemod.function.declaration.lua"] = "@lsp.type.function",
+	["@lsp.typemod.variable.defaultLibrary.lua"] = "@lsp.type.class.lua",
+	["@lsp.typemod.variable.definition.lua"] = "@punctuation",
+	luaBraces = "Delimiter",
+	luaBrackets = "Delimiter",
+	luaBuiltin = "Keyword",
+	luaComma = "Delimiter",
+	luaDocTag = "SpecialComment",
+	luaFuncArgName = "Identifier",
+	luaFuncCall = "Function",
+	luaFuncId = "luaNoise",
+	luaFuncKeyword = "Type",
+	luaFuncName = "Function",
+	luaFuncParens = "Delimiter",
+	luaFuncTable = "Structure",
+	luaFunction = "Keyword",
+	luaGotoLabel = "luaLabel",
+	luaIn = "luaRepeat",
+	luaLocal = "Keyword",
+	luaNoise = "Delimiter",
+	luaParens = "Delimiter",
+	luaSpecialTable = "Structure",
+	luaSpecialValue = "Function",
+	luaStatement = "Keyword",
 	luaStringLongTag = function(self)
 		local delimiter = self.Delimiter
 		return { bg = delimiter.bg, fg = delimiter.fg, italic = true }
 	end,
 
 	-- Make
-	makeCommands = 'Statment',
-	makeSpecTarget = 'Type',
+	makeCommands = "Statment",
+	makeSpecTarget = "Type",
 
 	-- Man
-	manHeader = 'markdownH1',
-	manOptionDesc = 'Special',
-	manReference = '@text.uri',
-	manSectionHeading = 'markdownH2',
-	manSubHeading = 'markdownH3',
-	manUnderline = '@text.literal',
+	manHeader = "markdownH1",
+	manOptionDesc = "Special",
+	manReference = "@text.uri",
+	manSectionHeading = "markdownH2",
+	manSubHeading = "markdownH3",
+	manUnderline = "@text.literal",
 
 	-- Markdown
-	markdownCode = 'mkdCode',
-	markdownCodeDelimiter = 'mkdCodeDelimiter',
+	markdownCode = "mkdCode",
+	markdownCodeDelimiter = "mkdCodeDelimiter",
 	markdownH1 = { fg = red, bold = true },
 	markdownH2 = { fg = orange, bold = true },
 	markdownH3 = { fg = yellow, bold = true },
 	markdownH4 = { fg = green_dark, bold = true },
 	markdownH5 = { fg = cyan, bold = true },
 	markdownH6 = { fg = purple_light, bold = true },
-	markdownLinkDelimiter = 'mkdDelimiter',
-	markdownLinkText = 'mkdLink',
-	markdownLinkTextDelimiter = 'markdownLinkDelimiter',
-	markdownUrl = 'mkdURL',
-	mkdBold = 'Ignore',
-	mkdBoldItalic = 'mkdBold',
-	mkdCode = 'Statement',
-	mkdCodeDelimiter = 'mkdBold',
-	mkdCodeEnd = 'mkdCodeStart',
-	mkdCodeStart = 'mkdCodeDelimiter',
-	mkdDelimiter = 'Delimiter',
-	mkdHeading = 'Delimiter',
-	mkdItalic = 'mkdBold',
-	mkdLineBreak = 'NonText',
-	mkdLink = 'Underlined',
-	mkdListItem = 'Special',
-	mkdRule = function(self) return { fg = self.Ignore.fg, sp = self.Delimiter.fg, underline = true } end,
-	mkdURL = 'htmlString',
+	markdownLinkDelimiter = "mkdDelimiter",
+	markdownLinkText = "mkdLink",
+	markdownLinkTextDelimiter = "markdownLinkDelimiter",
+	markdownUrl = "mkdURL",
+	mkdBold = "Ignore",
+	mkdBoldItalic = "mkdBold",
+	mkdCode = "Statement",
+	mkdCodeDelimiter = "mkdBold",
+	mkdCodeEnd = "mkdCodeStart",
+	mkdCodeStart = "mkdCodeDelimiter",
+	mkdDelimiter = "Delimiter",
+	mkdHeading = "Delimiter",
+	mkdItalic = "mkdBold",
+	mkdLineBreak = "NonText",
+	mkdLink = "Underlined",
+	mkdListItem = "Special",
+	mkdRule = function(self)
+		return { fg = self.Ignore.fg, sp = self.Delimiter.fg, underline = true }
+	end,
+	mkdURL = "htmlString",
 
 	-- PlantUML
-	plantumlArrowLR = 'Statement',
+	plantumlArrowLR = "Statement",
 	plantumlColonLine = {},
-	plantumlMindmap = 'Label',
-	plantumlMindmap2 = 'Label',
+	plantumlMindmap = "Label",
+	plantumlMindmap2 = "Label",
 
 	-- Rust
-	['@lsp.mod.callable.rust'] = '@lsp.type.function',
-	['@lsp.type.builtinType.rust'] = '@lsp.type.type',
-	['@lsp.type.character.rust'] = {},
-	['@lsp.type.decorator.rust'] = '@preproc',
-	['@lsp.type.derive.rust'] = '@macro',
-	['@lsp.type.enumMember.rust'] = {},
-	['@lsp.type.macro.rust'] = {},
-	['@lsp.type.operator.rust'] = {},
-	['@lsp.type.selfKeyword.rust'] = '@keyword',
-	['@lsp.type.selfTypeKeyword.rust'] = '@lsp.type.typeAlias.rust',
-	['@lsp.type.string.rust'] = {},
-	['@lsp.type.typeAlias.rust'] = '@type.definition',
-	['@lsp.typemod.character.injected.rust'] = '@lsp.type.character',
-	['@lsp.typemod.deriveHelper.attribute.rust'] = '@lsp.type.decorator.rust',
-	['@lsp.typemod.keyword.injected.rust'] = '@keyword',
-	['@lsp.typemod.macro.injected.rust'] = '@macro',
-	['@lsp.typemod.operator.injected.rust'] = '@operator',
-	['@lsp.typemod.string.injected.rust'] = '@lsp.type.string',
-	rustAssert = 'Debug',
-	rustCharacterDelimiter = 'rustNoise',
-	rustIdentifier = 'Identifier',
-	rustStaticLifetime = 'rustStorage',
-	rustStringDelimiter = 'rustNoise',
+	["@lsp.mod.callable.rust"] = "@lsp.type.function",
+	["@lsp.type.builtinType.rust"] = "@lsp.type.type",
+	["@lsp.type.character.rust"] = {},
+	["@lsp.type.decorator.rust"] = "@preproc",
+	["@lsp.type.derive.rust"] = "@macro",
+	["@lsp.type.enumMember.rust"] = {},
+	["@lsp.type.macro.rust"] = {},
+	["@lsp.type.operator.rust"] = {},
+	["@lsp.type.selfKeyword.rust"] = "@keyword",
+	["@lsp.type.selfTypeKeyword.rust"] = "@lsp.type.typeAlias.rust",
+	["@lsp.type.string.rust"] = {},
+	["@lsp.type.typeAlias.rust"] = "@type.definition",
+	["@lsp.typemod.character.injected.rust"] = "@lsp.type.character",
+	["@lsp.typemod.deriveHelper.attribute.rust"] = "@lsp.type.decorator.rust",
+	["@lsp.typemod.keyword.injected.rust"] = "@keyword",
+	["@lsp.typemod.macro.injected.rust"] = "@macro",
+	["@lsp.typemod.operator.injected.rust"] = "@operator",
+	["@lsp.typemod.string.injected.rust"] = "@lsp.type.string",
+	rustAssert = "Debug",
+	rustCharacterDelimiter = "rustNoise",
+	rustIdentifier = "Identifier",
+	rustStaticLifetime = "rustStorage",
+	rustStringDelimiter = "rustNoise",
 
 	-- Python
-	pythonBrackets = 'Delimiter',
-	pythonBuiltinFunc = 'Operator',
-	pythonBuiltinObj = 'Type',
-	pythonBuiltinType = 'Type',
-	pythonClass = 'Structure',
-	pythonClassParameters = 'pythonParameters',
-	pythonDecorator = 'PreProc',
-	pythonDottedName = 'Identifier',
-	pythonError = 'Error',
-	pythonException = 'Exception',
-	pythonInclude = 'Include',
-	pythonIndentError = 'pythonError',
-	pythonLambdaExpr = 'pythonOperator',
-	pythonOperator = 'Operator',
-	pythonParam = 'Identifier',
-	pythonParameters = 'Delimiter',
-	pythonSelf = 'Statement',
-	pythonSpaceError = 'pythonError',
-	pythonStatement = 'Statement',
+	pythonBrackets = "Delimiter",
+	pythonBuiltinFunc = "Operator",
+	pythonBuiltinObj = "Type",
+	pythonBuiltinType = "Type",
+	pythonClass = "Structure",
+	pythonClassParameters = "pythonParameters",
+	pythonDecorator = "PreProc",
+	pythonDottedName = "Identifier",
+	pythonError = "Error",
+	pythonException = "Exception",
+	pythonInclude = "Include",
+	pythonIndentError = "pythonError",
+	pythonLambdaExpr = "pythonOperator",
+	pythonOperator = "Operator",
+	pythonParam = "Identifier",
+	pythonParameters = "Delimiter",
+	pythonSelf = "Statement",
+	pythonSpaceError = "pythonError",
+	pythonStatement = "Statement",
 
 	-- Razor
-	razorCode = 'PreProc',
-	razorcsLHSMemberAccessOperator = 'Noise',
-	razorcsRHSMemberAccessOperator = 'razorcsLHSMemberAccessOperator',
-	razorcsStringDelimiter = 'razorhtmlValueDelimiter',
-	razorcsTypeNullable = 'Special',
-	razorcsUnaryOperatorKeyword = 'Operator',
-	razorDelimiter = 'Delimiter',
-	razorEventAttribute = 'PreCondit',
-	razorFor = 'razorIf',
-	razorhtmlAttribute = 'htmlArg',
-	razorhtmlAttributeOperator = 'Operator',
-	razorhtmlTag = 'htmlTag',
-	razorhtmlValueDelimiter = 'Delimiter',
-	razorIf = 'PreCondit',
-	razorImplicitExpression = 'PreProc',
-	razorLine = 'Constant',
-	razorUsing = 'Include',
+	razorCode = "PreProc",
+	razorcsLHSMemberAccessOperator = "Noise",
+	razorcsRHSMemberAccessOperator = "razorcsLHSMemberAccessOperator",
+	razorcsStringDelimiter = "razorhtmlValueDelimiter",
+	razorcsTypeNullable = "Special",
+	razorcsUnaryOperatorKeyword = "Operator",
+	razorDelimiter = "Delimiter",
+	razorEventAttribute = "PreCondit",
+	razorFor = "razorIf",
+	razorhtmlAttribute = "htmlArg",
+	razorhtmlAttributeOperator = "Operator",
+	razorhtmlTag = "htmlTag",
+	razorhtmlValueDelimiter = "Delimiter",
+	razorIf = "PreCondit",
+	razorImplicitExpression = "PreProc",
+	razorLine = "Constant",
+	razorUsing = "Include",
 
 	-- Ruby
-	rubyClass = 'Structure',
-	rubyDefine = 'Define',
-	rubyInterpolationDelimiter = 'Delimiter',
+	rubyClass = "Structure",
+	rubyDefine = "Define",
+	rubyInterpolationDelimiter = "Delimiter",
 
 	-- Scala
-	scalaKeyword = 'Keyword',
-	scalaNameDefinition = 'Identifier',
+	scalaKeyword = "Keyword",
+	scalaNameDefinition = "Identifier",
 
 	-- SCSS
-	scssAmpersand = 'Special',
-	scssAttribute = 'Noise',
-	scssBoolean = 'Boolean',
-	scssDefault = 'Keyword',
-	scssDefinition = 'PreProc',
-	scssElse = 'scssIf',
-	scssIf = 'PreCondit',
-	scssInclude = 'Include',
+	scssAmpersand = "Special",
+	scssAttribute = "Noise",
+	scssBoolean = "Boolean",
+	scssDefault = "Keyword",
+	scssDefinition = "PreProc",
+	scssElse = "scssIf",
+	scssIf = "PreCondit",
+	scssInclude = "Include",
 	scssMixinName = function(self)
 		local definition = self.cssClassName
 		return { bg = definition.bg, fg = definition.fg, italic = true }
 	end,
-	scssSelectorChar = 'Delimiter',
-	scssSelectorName = 'Identifier',
-	scssVariable = 'Define',
-	scssVariableAssignment = 'Operator',
+	scssSelectorChar = "Delimiter",
+	scssSelectorName = "Identifier",
+	scssVariable = "Define",
+	scssVariableAssignment = "Operator",
 
 	-- shell
-	shDerefSimple = 'SpecialChar',
-	shFunctionKey = 'Function',
-	shLoop = 'Repeat',
-	shParen = 'Delimiter',
-	shQuote = 'Delimiter',
-	shSet = 'Statement',
-	shTestOpr = 'Debug',
+	shDerefSimple = "SpecialChar",
+	shFunctionKey = "Function",
+	shLoop = "Repeat",
+	shParen = "Delimiter",
+	shQuote = "Delimiter",
+	shSet = "Statement",
+	shTestOpr = "Debug",
 
 	-- SQL
-	sqlKeyword = 'Keyword',
-	sqlParen = 'Delimiter',
-	sqlSpecial = 'Constant',
-	sqlStatement = 'Statement',
-	sqlParenFunc = 'Function',
+	sqlKeyword = "Keyword",
+	sqlParen = "Delimiter",
+	sqlSpecial = "Constant",
+	sqlStatement = "Statement",
+	sqlParenFunc = "Function",
 
 	-- Solidity
-	solBuiltinType = 'Type',
-	solContract = 'Typedef',
-	solContractName = 'Function',
+	solBuiltinType = "Type",
+	solContract = "Typedef",
+	solContractName = "Function",
 
 	-- TeX
-	texMathRegion = 'Number',
-	texMathSub = 'Number',
-	texMathSuper = 'Number',
-	texMathRegionX = 'Number',
-	texMathRegionXX = 'Number',
+	texMathRegion = "Number",
+	texMathSub = "Number",
+	texMathSuper = "Number",
+	texMathRegionX = "Number",
+	texMathRegionXX = "Number",
 
 	-- TOML
-	tomlComment = 'Comment',
-	tomlDate = 'Special',
-	tomlFloat = 'Float',
-	tomlKey = 'Label',
-	tomlTable = 'Structure',
+	tomlComment = "Comment",
+	tomlDate = "Special",
+	tomlFloat = "Float",
+	tomlKey = "Label",
+	tomlTable = "Structure",
 
 	-- VimScript
-	vimCmdSep = 'Delimiter',
-	vimFunction = 'Function',
-	vimFgBgAttrib = 'Constant',
-	vimHiCterm = 'Label',
-	vimHiCtermFgBg = 'vimHiCterm',
-	vimHiGroup = 'Typedef',
-	vimHiGui = 'vimHiCterm',
-	vimHiGuiFgBg = 'vimHiGui',
-	vimHiKeyList = 'Operator',
-	vimIsCommand = 'Identifier',
-	vimOption = 'Keyword',
-	vimScriptDelim = 'Ignore',
-	vimSet = 'String',
-	vimSetEqual = 'Operator',
-	vimSetSep = 'Delimiter',
-	vimUserFunc = 'vimFunction',
+	vimCmdSep = "Delimiter",
+	vimFunction = "Function",
+	vimFgBgAttrib = "Constant",
+	vimHiCterm = "Label",
+	vimHiCtermFgBg = "vimHiCterm",
+	vimHiGroup = "Typedef",
+	vimHiGui = "vimHiCterm",
+	vimHiGuiFgBg = "vimHiGui",
+	vimHiKeyList = "Operator",
+	vimIsCommand = "Identifier",
+	vimOption = "Keyword",
+	vimScriptDelim = "Ignore",
+	vimSet = "String",
+	vimSetEqual = "Operator",
+	vimSetSep = "Delimiter",
+	vimUserFunc = "vimFunction",
 
 	-- XML
-	xmlAttrib = 'htmlArg',
-	xmlEndTag = 'xmlTag',
-	xmlEqual = 'Operator',
-	xmlTag = 'htmlTag',
-	xmlTagName = 'htmlTagName',
+	xmlAttrib = "htmlArg",
+	xmlEndTag = "xmlTag",
+	xmlEqual = "Operator",
+	xmlTag = "htmlTag",
+	xmlTagName = "htmlTagName",
 
 	-- XXD
-	xxdAddress = 'Label',
-	xxdAscii = 'Character',
-	xxdDot = 'Ignore',
-	xxdSep = 'Delimiter',
+	xxdAddress = "Label",
+	xxdAscii = "Character",
+	xxdDot = "Ignore",
+	xxdSep = "Delimiter",
 
 	-- YAML
-	yamlInline = 'Delimiter',
-	yamlKey = 'Label',
+	yamlInline = "Delimiter",
+	yamlKey = "Label",
 
 	--[[ Plugins
 		Everything in this section is OPTIONAL. Feel free to remove everything
@@ -912,73 +942,121 @@ colorscheme.highlight_all {
 		missing. ]]
 
 	-- ALE
-	ALEErrorSign = 'DiagnosticSignError',
-	ALEWarningSign = 'DiagnosticSignWarn',
+	ALEErrorSign = "DiagnosticSignError",
+	ALEWarningSign = "DiagnosticSignWarn",
 
 	-- barbar.nvim
-	BufferAlternate = function(self) return { fg = self.BufferVisible.fg, bg = gray_dark } end,
-	BufferAlternateERROR = function(self) return { fg = self.ErrorMsg.fg, bg = gray_dark } end,
-	BufferAlternateHINT = function(self) return { fg = self.DiagnosticFloatingHint.fg, bg = gray_dark } end,
-	BufferAlternateIndex = function(self) return { fg = self.Number.fg, bg = gray_dark } end,
-	BufferAlternateINFO = function(self) return { fg = self.DiagnosticFloatingInfo.fg, bg = gray_dark } end,
-	BufferAlternateMod = function(self) return { fg = self.BufferVisibleMod.fg, bg = gray_dark, bold = true } end,
+	BufferAlternate = function(self)
+		return { fg = self.BufferVisible.fg, bg = gray_dark }
+	end,
+	BufferAlternateERROR = function(self)
+		return { fg = self.ErrorMsg.fg, bg = gray_dark }
+	end,
+	BufferAlternateHINT = function(self)
+		return { fg = self.DiagnosticFloatingHint.fg, bg = gray_dark }
+	end,
+	BufferAlternateIndex = function(self)
+		return { fg = self.Number.fg, bg = gray_dark }
+	end,
+	BufferAlternateINFO = function(self)
+		return { fg = self.DiagnosticFloatingInfo.fg, bg = gray_dark }
+	end,
+	BufferAlternateMod = function(self)
+		return { fg = self.BufferVisibleMod.fg, bg = gray_dark, bold = true }
+	end,
 	BufferAlternateSign = { fg = teal, bg = gray_dark },
-	BufferAlternateTarget = function(self) return { fg = self.BufferAlternateSign.fg, bg = gray_dark, italic = true } end,
-	BufferAlternateWARN = function(self) return { fg = self.WarningMsg.fg, bg = gray_dark } end,
+	BufferAlternateTarget = function(self)
+		return { fg = self.BufferAlternateSign.fg, bg = gray_dark, italic = true }
+	end,
+	BufferAlternateWARN = function(self)
+		return { fg = self.WarningMsg.fg, bg = gray_dark }
+	end,
 
-	BufferCurrent = 'TabLineSel',
-	BufferCurrentERROR = function(self) return { fg = self.ErrorMsg.fg, bg = self.BufferCurrent.bg } end,
-	BufferCurrentHINT = function(self) return { fg = self.DiagnosticFloatingHint.fg, bg = self.BufferCurrent.bg } end,
-	BufferCurrentIndex = function(self) return { fg = self.Number.fg, bg = self.BufferCurrent.bg } end,
-	BufferCurrentINFO = function(self) return { fg = self.DiagnosticFloatingInfo.fg, bg = self.BufferCurrent.bg } end,
+	BufferCurrent = "TabLineSel",
+	BufferCurrentERROR = function(self)
+		return { fg = self.ErrorMsg.fg, bg = self.BufferCurrent.bg }
+	end,
+	BufferCurrentHINT = function(self)
+		return { fg = self.DiagnosticFloatingHint.fg, bg = self.BufferCurrent.bg }
+	end,
+	BufferCurrentIndex = function(self)
+		return { fg = self.Number.fg, bg = self.BufferCurrent.bg }
+	end,
+	BufferCurrentINFO = function(self)
+		return { fg = self.DiagnosticFloatingInfo.fg, bg = self.BufferCurrent.bg }
+	end,
 	BufferCurrentMod = { fg = tan, bg = black, bold = true },
-	BufferCurrentSign = 'DiagnosticFloatingHint',
-	BufferCurrentTarget = 'BufferCurrentSign',
-	BufferCurrentWARN = function(self) return { fg = self.WarningMsg.fg, bg = self.BufferCurrent.bg } end,
+	BufferCurrentSign = "DiagnosticFloatingHint",
+	BufferCurrentTarget = "BufferCurrentSign",
+	BufferCurrentWARN = function(self)
+		return { fg = self.WarningMsg.fg, bg = self.BufferCurrent.bg }
+	end,
 
-	BufferInactive = 'BufferVisible',
-	BufferInactiveERROR = function(self) return { fg = self.ErrorMsg.fg, bg = self.BufferInactive.bg } end,
-	BufferInactiveHINT = function(self) return { fg = self.DiagnosticFloatingHint.fg, bg = self.BufferInactive.bg } end,
-	BufferInactiveIndex = function(self) return { fg = self.Number.fg, bg = self.BufferInactive.bg } end,
-	BufferInactiveINFO = function(self) return { fg = self.DiagnosticFloatingInfo.fg, bg = self.BufferInactive.bg } end,
-	BufferInactiveMod = 'BufferVisibleMod',
-	BufferInactiveSign = 'BufferVisibleSign',
-	BufferInactiveTarget = 'BufferVisibleTarget',
-	BufferInactiveWARN = function(self) return { fg = self.WarningMsg.fg, bg = self.BufferInactive.bg } end,
+	BufferInactive = "BufferVisible",
+	BufferInactiveERROR = function(self)
+		return { fg = self.ErrorMsg.fg, bg = self.BufferInactive.bg }
+	end,
+	BufferInactiveHINT = function(self)
+		return { fg = self.DiagnosticFloatingHint.fg, bg = self.BufferInactive.bg }
+	end,
+	BufferInactiveIndex = function(self)
+		return { fg = self.Number.fg, bg = self.BufferInactive.bg }
+	end,
+	BufferInactiveINFO = function(self)
+		return { fg = self.DiagnosticFloatingInfo.fg, bg = self.BufferInactive.bg }
+	end,
+	BufferInactiveMod = "BufferVisibleMod",
+	BufferInactiveSign = "BufferVisibleSign",
+	BufferInactiveTarget = "BufferVisibleTarget",
+	BufferInactiveWARN = function(self)
+		return { fg = self.WarningMsg.fg, bg = self.BufferInactive.bg }
+	end,
 
 	BufferTabpages = { bold = true },
-	BufferTabpageFill = 'TabLineFill',
+	BufferTabpageFill = "TabLineFill",
 
-	BufferVisible = 'TabLine',
-	BufferVisibleERROR = function(self) return { fg = self.ErrorMsg.fg, bg = self.BufferVisible.bg } end,
-	BufferVisibleHINT = function(self) return { fg = self.DiagnosticFloatingHint.fg, bg = self.BufferVisible.bg } end,
-	BufferVisibleIndex = function(self) return { fg = self.Number.fg, bg = self.BufferVisible.bg } end,
-	BufferVisibleINFO = function(self) return { fg = self.DiagnosticFloatingInfo.fg, bg = self.BufferVisible.bg } end,
-	BufferVisibleMod = function(self) return { fg = white, bg = self.BufferVisible.bg, italic = true } end,
+	BufferVisible = "TabLine",
+	BufferVisibleERROR = function(self)
+		return { fg = self.ErrorMsg.fg, bg = self.BufferVisible.bg }
+	end,
+	BufferVisibleHINT = function(self)
+		return { fg = self.DiagnosticFloatingHint.fg, bg = self.BufferVisible.bg }
+	end,
+	BufferVisibleIndex = function(self)
+		return { fg = self.Number.fg, bg = self.BufferVisible.bg }
+	end,
+	BufferVisibleINFO = function(self)
+		return { fg = self.DiagnosticFloatingInfo.fg, bg = self.BufferVisible.bg }
+	end,
+	BufferVisibleMod = function(self)
+		return { fg = white, bg = self.BufferVisible.bg, italic = true }
+	end,
 	BufferVisibleSign = function(self)
 		local definition = self.BufferVisibleMod
 		return { fg = definition.fg, bg = definition.bg, bold = true }
 	end,
-	BufferVisibleTarget = 'BufferVisibleSign',
-	BufferVisibleWARN = function(self) return { fg = self.WarningMsg.fg, bg = self.BufferVisible.bg } end,
+	BufferVisibleTarget = "BufferVisibleSign",
+	BufferVisibleWARN = function(self)
+		return { fg = self.WarningMsg.fg, bg = self.BufferVisible.bg }
+	end,
 
 	-- coc.nvim
-	CocErrorHighlight = 'DiagnosticUnderlineError',
-	CocErrorSign = 'DiagnosticSignError',
-	CocHintHighlight = 'DiagnosticUnderlineHint',
-	CocHintSign = 'DiagnosticSignHint',
-	CocInfoHighlight = 'DiagnosticUnderlineInfo',
-	CocInfoSign = 'DiagnosticSignInfo',
-	CocWarningHighlight = 'DiagnosticUnderlineWarn',
-	CocWarningSign = 'DiagnosticSignWarn',
+	CocErrorHighlight = "DiagnosticUnderlineError",
+	CocErrorSign = "DiagnosticSignError",
+	CocHintHighlight = "DiagnosticUnderlineHint",
+	CocHintSign = "DiagnosticSignHint",
+	CocInfoHighlight = "DiagnosticUnderlineInfo",
+	CocInfoSign = "DiagnosticSignInfo",
+	CocWarningHighlight = "DiagnosticUnderlineWarn",
+	CocWarningSign = "DiagnosticSignWarn",
 
 	-- Fern
-	FernBranchText = 'Directory',
+	FernBranchText = "Directory",
 
 	-- gitsigns.nvim
-	GitSignsAdd = 'GitGutterAdd',
-	GitSignsChange = 'GitGutterChange',
-	GitSignsDelete = 'GitGutterDelete',
+	GitSignsAdd = "GitGutterAdd",
+	GitSignsChange = "GitGutterChange",
+	GitSignsDelete = "GitGutterDelete",
 
 	-- indent-blankline.nvim
 	IndentBlanklineChar = function(self)
@@ -986,96 +1064,102 @@ colorscheme.highlight_all {
 		definition.nocombine = true
 		return definition
 	end,
-	IndentBlanklineSpaceChar = 'IndentBlanklineChar',
+	IndentBlanklineSpaceChar = "IndentBlanklineChar",
 
 	-- lazy.nvim
-	LazyButton = 'TabLine',
-	LazyButtonActive = 'TabLineSel',
-	LazyCommit = 'Number',
-	LazyCommitIssue = 'LazyUrl',
-	LazyCommitType = 'Type',
-	LazyDir = 'Directory',
-	LazyH1 = 'markdownH1',
-	LazyH2 = 'markdownH2',
-	LazyProp = '@field',
-	LazyReasonEvent = 'Repeat',
-	LazyReasonFt = 'Conditional',
-	LazyReasonImport = 'Function',
-	LazyReasonKeys = 'String',
-	LazyReasonPlugin = 'Label',
-	LazyReasonSource = 'Include',
-	LazyReasonStart = 'Constant',
-	LazySpecial = 'Special',
-	LazyTaskOutput = 'Statement',
-	LazyUrl = 'Underlined',
+	LazyButton = "TabLine",
+	LazyButtonActive = "TabLineSel",
+	LazyCommit = "Number",
+	LazyCommitIssue = "LazyUrl",
+	LazyCommitType = "Type",
+	LazyDir = "Directory",
+	LazyH1 = "markdownH1",
+	LazyH2 = "markdownH2",
+	LazyProp = "@field",
+	LazyReasonEvent = "Repeat",
+	LazyReasonFt = "Conditional",
+	LazyReasonImport = "Function",
+	LazyReasonKeys = "String",
+	LazyReasonPlugin = "Label",
+	LazyReasonSource = "Include",
+	LazyReasonStart = "Constant",
+	LazySpecial = "Special",
+	LazyTaskOutput = "Statement",
+	LazyUrl = "Underlined",
 
 	-- LSPSaga
-	DefinitionCount = 'Number',
-	DefinitionIcon = 'Special',
-	ReferencesCount = 'Number',
-	ReferencesIcon = 'DefinitionIcon',
-	TargetFileName = 'Directory',
-	TargetWord = 'Title',
+	DefinitionCount = "Number",
+	DefinitionIcon = "Special",
+	ReferencesCount = "Number",
+	ReferencesIcon = "DefinitionIcon",
+	TargetFileName = "Directory",
+	TargetWord = "Title",
 
 	-- mini.nvim
-	MiniJump = 'MiniJump2dSpot',
+	MiniJump = "MiniJump2dSpot",
 
 	-- NERDTree
-	NERDTreeCWD = 'Label',
-	NERDTreeUp = 'Operator',
-	NERDTreeDir = 'Directory',
-	NERDTreeDirSlash = 'Delimiter',
-	NERDTreeOpenable = 'NERDTreeDir',
-	NERDTreeClosable = 'NERDTreeOpenable',
-	NERDTreeExecFile = 'Function',
-	NERDTreeLinkTarget = 'Tag',
+	NERDTreeCWD = "Label",
+	NERDTreeUp = "Operator",
+	NERDTreeDir = "Directory",
+	NERDTreeDirSlash = "Delimiter",
+	NERDTreeOpenable = "NERDTreeDir",
+	NERDTreeClosable = "NERDTreeOpenable",
+	NERDTreeExecFile = "Function",
+	NERDTreeLinkTarget = "Tag",
 
 	-- nvim-cmp
 	CmpItemAbbr = { fg = white },
 	CmpItemAbbrMatch = { fg = magenta_dark },
 	CmpItemAbbrMatchFuzzy = { fg = magenta_dark, nocombine = true, underline = true },
-	CmpItemKindClass = 'CmpItemKindStruct',
-	CmpItemKindsp = 'Label',
-	CmpItemKindConstant = 'Constant',
-	CmpItemKindConstructor = 'CmpItemKindMethod',
-	CmpItemKind = 'Type',
-	CmpItemKindEnum = 'CmpItemKindStruct',
-	CmpItemKindEnumMember = 'CmpItemKindConstant',
-	CmpItemKindEvent = 'Repeat',
-	CmpItemKindField = 'Identifier',
-	CmpItemKindFile = 'Directory',
-	CmpItemKindFolder = 'CmpItemKindFile',
-	CmpItemKindFunction = 'Function',
-	CmpItemKindInterface = 'Type',
-	CmpItemKindKeyword = 'Keyword',
-	CmpItemKindMethod = 'CmpItemKindFunction',
-	CmpItemKindModule = 'Include',
-	CmpItemKindOperator = 'Operator',
-	CmpItemKindProperty = 'CmpItemKindField',
-	CmpItemKindReference = 'StorageClass',
-	CmpItemKindSnippet = 'Special',
-	CmpItemKindStruct = 'Structure',
-	CmpItemKindText = 'String',
-	CmpItemKindTypeParameter = 'Typedef',
-	CmpItemKindUnit = 'CmpItemKindStruct',
-	CmpItemKindValue = 'CmpItemKindConstant',
-	CmpItemKindVariable = 'Identifier',
+	CmpItemKindClass = "CmpItemKindStruct",
+	CmpItemKindsp = "Label",
+	CmpItemKindConstant = "Constant",
+	CmpItemKindConstructor = "CmpItemKindMethod",
+	CmpItemKind = "Type",
+	CmpItemKindEnum = "CmpItemKindStruct",
+	CmpItemKindEnumMember = "CmpItemKindConstant",
+	CmpItemKindEvent = "Repeat",
+	CmpItemKindField = "Identifier",
+	CmpItemKindFile = "Directory",
+	CmpItemKindFolder = "CmpItemKindFile",
+	CmpItemKindFunction = "Function",
+	CmpItemKindInterface = "Type",
+	CmpItemKindKeyword = "Keyword",
+	CmpItemKindMethod = "CmpItemKindFunction",
+	CmpItemKindModule = "Include",
+	CmpItemKindOperator = "Operator",
+	CmpItemKindProperty = "CmpItemKindField",
+	CmpItemKindReference = "StorageClass",
+	CmpItemKindSnippet = "Special",
+	CmpItemKindStruct = "Structure",
+	CmpItemKindText = "String",
+	CmpItemKindTypeParameter = "Typedef",
+	CmpItemKindUnit = "CmpItemKindStruct",
+	CmpItemKindValue = "CmpItemKindConstant",
+	CmpItemKindVariable = "Identifier",
 
 	-- nvim-tree
-	NvimTreeGitDeleted = function(self) return { fg = self.DiffDelete.bg } end,
+	NvimTreeGitDeleted = function(self)
+		return { fg = self.DiffDelete.bg }
+	end,
 	NvimTreeGitDirty = { fg = orange },
-	NvimTreeGitIgnored = 'Ignore',
-	NvimTreeGitMerge = 'NvimTreeGitRenamed',
-	NvimTreeGitNew = function(self) return { fg = self.DiffAdd.bg } end,
-	NvimTreeGitRenamed = function(self) return { fg = self.DiffChange.bg } end,
+	NvimTreeGitIgnored = "Ignore",
+	NvimTreeGitMerge = "NvimTreeGitRenamed",
+	NvimTreeGitNew = function(self)
+		return { fg = self.DiffAdd.bg }
+	end,
+	NvimTreeGitRenamed = function(self)
+		return { fg = self.DiffChange.bg }
+	end,
 	NvimTreeGitStaged = { fg = cyan },
 
 	-- packer.nvim
-	packerFail = 'ErrorMsg',
-	packerHash = 'Number',
-	packerPackageNotLoaded = 'Ignore',
-	packerStatusFail = 'Statement',
-	packerStatusSuccess = 'packerStatusFail',
+	packerFail = "ErrorMsg",
+	packerHash = "Number",
+	packerPackageNotLoaded = "Ignore",
+	packerStatusFail = "Statement",
+	packerStatusSuccess = "packerStatusFail",
 	packerSuccess = function(self)
 		local definition = vim.deepcopy(self.packerFail)
 		definition.bg = nil
@@ -1085,22 +1169,28 @@ colorscheme.highlight_all {
 
 	-- symbols-outline.nvim
 	FocusedSymbol = {},
-	SymbolsOutlineConnector = 'Delimiter',
+	SymbolsOutlineConnector = "Delimiter",
 
 	-- todo-comments.nvim
-	TodoFgFIX = function(self) return { fg = self.ErrorMsg.fg } end,
+	TodoFgFIX = function(self)
+		return { fg = self.ErrorMsg.fg }
+	end,
 	TodoFgHACK = { fg = yellow },
 	TodoFgNOTE = { fg = green_dark },
 	TodoFgPERF = { fg = magenta },
-	TodoFgTODO = function(self) return { fg = self.Todo.bg, italic = true } end,
-	TodoFgWARN = function(self) return { fg = self.WarningMsg.fg } end,
+	TodoFgTODO = function(self)
+		return { fg = self.Todo.bg, italic = true }
+	end,
+	TodoFgWARN = function(self)
+		return { fg = self.WarningMsg.fg }
+	end,
 	TodoBgFIX = function(self)
 		return {
 			fg = black,
 			bg = self.TodoFgFIX.fg,
 			bold = true,
 			italic = true,
-			nocombine = true
+			nocombine = true,
 		}
 	end,
 	TodoBgHACK = function(self)
@@ -1109,7 +1199,7 @@ colorscheme.highlight_all {
 			bg = self.TodoFgHACK.fg,
 			bold = true,
 			italic = true,
-			nocombine = true
+			nocombine = true,
 		}
 	end,
 	TodoBgNOTE = function(self)
@@ -1118,7 +1208,7 @@ colorscheme.highlight_all {
 			bg = self.TodoFgNOTE.fg,
 			bold = true,
 			italic = true,
-			nocombine = true
+			nocombine = true,
 		}
 	end,
 	TodoBgPERF = function(self)
@@ -1127,7 +1217,7 @@ colorscheme.highlight_all {
 			bg = self.TodoFgPERF.fg,
 			bold = true,
 			italic = true,
-			nocombine = true
+			nocombine = true,
 		}
 	end,
 	TodoBgTODO = function(self)
@@ -1136,7 +1226,7 @@ colorscheme.highlight_all {
 			bg = self.TodoFgTODO.fg,
 			bold = true,
 			italic = true,
-			nocombine = true
+			nocombine = true,
 		}
 	end,
 	TodoBgWARN = function(self)
@@ -1145,16 +1235,16 @@ colorscheme.highlight_all {
 			bg = self.TodoFgWARN.fg,
 			bold = true,
 			italic = true,
-			nocombine = true
+			nocombine = true,
 		}
 	end,
 
-	TodoSignFIX = 'TodoFgFIX',
-	TodoSignHACK = 'TodoFgHACK',
-	TodoSignNOTE = 'TodoFgNOTE',
-	TodoSignPERF = 'TodoFgPERF',
-	TodoSignTODO = 'TodoFgTODO',
-	TodoSignWARN = 'TodoFgWARN',
+	TodoSignFIX = "TodoFgFIX",
+	TodoSignHACK = "TodoFgHACK",
+	TodoSignNOTE = "TodoFgNOTE",
+	TodoSignPERF = "TodoFgPERF",
+	TodoSignTODO = "TodoFgTODO",
+	TodoSignWARN = "TodoFgWARN",
 
 	-- trouble.nvim
 	TroubleCount = function(self)
@@ -1164,7 +1254,7 @@ colorscheme.highlight_all {
 	end,
 
 	-- vim-easymotion
-	EasyMotion = 'IncSearch',
+	EasyMotion = "IncSearch",
 
 	-- vim-gitgutter
 	GitGutterAdd = { fg = green },
@@ -1177,16 +1267,16 @@ colorscheme.highlight_all {
 	IndentGuidesEven = { bg = gray },
 
 	-- vim-jumpmotion
-	JumpMotion = 'EasyMotion',
+	JumpMotion = "EasyMotion",
 
 	-- vim-sandwhich
-	OperatorSandwichChange = 'DiffText',
+	OperatorSandwichChange = "DiffText",
 
 	-- vim-signify
-	SignifySignAdd = 'GitGutterAdd',
-	SignifySignChange = 'GitGutterChange',
-	SignifySignDelete = 'GitGutterDelete',
-	SignifySignChangeDelete = 'GitGutterChangeDelete',
+	SignifySignAdd = "GitGutterAdd",
+	SignifySignChange = "GitGutterChange",
+	SignifySignDelete = "GitGutterDelete",
+	SignifySignChangeDelete = "GitGutterChangeDelete",
 
 	-- Leap.nvim
 	LeapMatch = { fg = white, bold = true, nocombine = true },
@@ -1197,12 +1287,12 @@ colorscheme.highlight_all {
 	HLargs = { fg = teal },
 
 	-- Telescope
-	TelescopeNormal = 'Normal',
-	TelescopePromptCounter = 'Comment',
+	TelescopeNormal = "Normal",
+	TelescopePromptCounter = "Comment",
 	TelescopeSelection = { fg = white, bg = bg_light, italic = true },
 	TelescopeSelectionCaret = { fg = white, bg = bg_light, bold = true },
 	TelescopeMultiSelection = { fg = bg_light, italic = true },
-	TelescopeBorder = 'Normal',
+	TelescopeBorder = "Normal",
 	TelescopeMatching = { fg = magenta_dark },
 	TelescopePromptPrefix = { fg = magenta_dark, bold = true },
 	TelescopePromptNormal = { bg = bg_light },
@@ -1220,124 +1310,58 @@ colorscheme.highlight_all {
 	ScrollbarError = function(self)
 		return { fg = self.Error.fg }
 	end,
-	ScrollbarErrorHandle = function (self)
+	ScrollbarErrorHandle = function(self)
 		return { fg = self.ScrollbarError.fg, bg = self.ScrollbarHandle.bg }
 	end,
 	ScrollbarGitDelete = function(self)
 		return { fg = self.GitGutterDelete.fg }
 	end,
-	ScrollbarGitDeleteHandle = function (self)
+	ScrollbarGitDeleteHandle = function(self)
 		return { fg = self.ScrollbarGitDelete.fg, bg = self.ScrollbarHandle.bg }
 	end,
 	ScrollbarHint = function(self)
 		return { fg = self.Hint.fg }
 	end,
-	ScrollbarHintHandle = function (self)
+	ScrollbarHintHandle = function(self)
 		return { fg = self.ScrollbarHint.fg, bg = self.ScrollbarHandle.bg }
 	end,
 	ScrollbarGitAdd = function(self)
 		return { fg = self.GitGutterAdd.fg }
 	end,
-	ScrollbarGitAddHandle = function (self)
+	ScrollbarGitAddHandle = function(self)
 		return { fg = self.ScrollbarGitAdd.fg, bg = self.ScrollbarHandle.bg }
 	end,
 	ScrollbarInfo = function(self)
 		return { fg = self.Info.fg }
 	end,
-	ScrollbarInfoHandle = function (self)
+	ScrollbarInfoHandle = function(self)
 		return { fg = self.ScrollbarInfo.fg, bg = self.ScrollbarHandle.bg }
 	end,
 	ScrollbarWarn = function(self)
 		return { fg = self.WarningMsg.fg }
 	end,
-	ScrollbarWarnHandle = function (self)
+	ScrollbarWarnHandle = function(self)
 		return { fg = self.ScrollbarWarn.fg, bg = self.ScrollbarHandle.bg }
 	end,
 	ScrollbarGitChange = function(self)
 		return { fg = self.GitGutterChange.fg }
 	end,
-	ScrollbarGitChangeHandle = function (self)
+	ScrollbarGitChangeHandle = function(self)
 		return { fg = self.ScrollbarGitChange.fg, bg = self.ScrollbarHandle.bg }
 	end,
-	ScrollbarSearch = { fg = pink_light},
-	ScrollbarSearchHandle = function (self)
+	ScrollbarSearch = { fg = pink_light },
+	ScrollbarSearchHandle = function(self)
 		return { fg = self.ScrollbarSearch.fg, bg = self.ScrollbarHandle.bg }
 	end,
 	ScrollbarCursor = function(self)
 		return { fg = self.Normal.fg }
 	end,
-	ScrollbarCursorHandle = function (self)
+	ScrollbarCursorHandle = function(self)
 		return { fg = self.ScrollbarCursor.fg, bg = self.ScrollbarHandle.bg }
 	end,
-	ScrollbarMisc = 'ScrollbarCursor',
-	ScrollbarMiscHandle = 'ScrollbarCursorHandle',
-
-	-- Lualine
-	lualine_a_normal = function (self)
-		return { fg = self.StatusLine.bg, bg = green_dark, bold = true }
-	end,
-	lualine_b_normal = function (self)
-		return { fg = green_dark, bg = self.StatusLine.bg }
-	end,
-	lualine_c_normal = function (self)
-		return { fg = self.Normal.fg, bg = self.StatusLine.bg }
-	end,
-	lualine_a_visual = function (self)
-		return { fg = self.StatusLine.bg, bg = magenta, bold = true }
-	end,
-	lualine_b_visual = function (self)
-		return { fg = magenta, bg = self.StatusLine.bg }
-	end,
-	lualine_c_visual = function (self)
-		return { fg = self.Normal.fg, bg = self.StatusLine.bg }
-	end,
-	lualine_a_insert = function (self)
-		return { fg = self.StatusLine.bg, bg = ice, bold = true }
-	end,
-	lualine_b_insert = function (self)
-		return { fg = ice, bg = self.StatusLine.bg }
-	end,
-	lualine_c_insert = function (self)
-		return { fg = self.Normal.fg, bg = self.StatusLine.bg }
-	end,
-	lualine_a_replace = function (self)
-		return { fg = self.StatusLine.bg, bg = red, bold = true }
-	end,
-	lualine_b_replace = function (self)
-		return { fg = red, bg = self.StatusLine.bg }
-	end,
-	lualine_c_replace = function (self)
-		return { fg = self.Normal.fg, bg = self.StatusLine.bg }
-	end,
-	lualine_a_command = function (self)
-		return { fg = self.StatusLine.bg, bg = yellow, bold = true }
-	end,
-	lualine_b_command = function (self)
-		return { fg = yellow, bg = self.StatusLine.bg }
-	end,
-	lualine_c_command = function (self)
-		return { fg = self.Normal.fg, bg = self.StatusLine.bg }
-	end,
-	lualine_a_terminal = function (self)
-		return { fg = self.StatusLine.bg, bg = orange, bold = true }
-	end,
-	lualine_b_terminal = function (self)
-		return { fg = orange, bg = self.StatusLine.bg }
-	end,
-	lualine_c_terminal = function (self)
-		return { fg = self.Normal.fg, bg = self.StatusLine.bg }
-	end,
-	lualine_a_inactive = function (self)
-		return { fg = self.StatusLine.bg, bg = self.Comment.fg, bold = true }
-	end,
-	lualine_b_inactive = function (self)
-		return { fg = self.Comment.fg, bg = self.StatusLine.bg }
-	end,
-	lualine_c_inactive = function (self)
-		return { fg = self.Normal.fg, bg = self.StatusLine.bg }
-	end,
-
-}
+	ScrollbarMisc = "ScrollbarCursor",
+	ScrollbarMiscHandle = "ScrollbarCursorHandle",
+})
 
 --[[ Step 5: Terminal Colors
 	Define the color palette used by :terminal when in GUI Vim
@@ -1374,7 +1398,7 @@ colorscheme.highlight_all {
 	While you are certainly free to make colors 0 to 7 shades of blue,
 	this will inevitably cause usability issues so… be careful.
 ]]
-colorscheme.highlight_terminal {
+colorscheme.highlight_terminal({
 	[1] = black,
 	[2] = red,
 	[3] = green,
@@ -1391,7 +1415,7 @@ colorscheme.highlight_terminal {
 	[14] = purple,
 	[15] = cyan,
 	[16] = gray_light,
-}
+})
 
 --[[ Step 5: Sourcing
 	When you wish to load your colorscheme, simply add this folder with a plugin manager
