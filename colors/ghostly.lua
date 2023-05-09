@@ -1277,64 +1277,64 @@ colorscheme.highlight_all {
 		return { fg = self.StatusLine.bg, bg = green_dark, bold = true }
 	end,
 	lualine_b_normal = function (self)
-		return { fg = green_dark, bg = self.StatusLine.bg, bold = true }
+		return { fg = green_dark, bg = self.StatusLine.bg }
 	end,
 	lualine_c_normal = function (self)
-		return { fg = self.Normal.fg, bg = self.StatusLine.bg, bold = true }
+		return { fg = self.Normal.fg, bg = self.StatusLine.bg }
 	end,
 	lualine_a_visual = function (self)
 		return { fg = self.StatusLine.bg, bg = magenta, bold = true }
 	end,
 	lualine_b_visual = function (self)
-		return { fg = magenta, bg = self.StatusLine.bg, bold = true }
+		return { fg = magenta, bg = self.StatusLine.bg }
 	end,
 	lualine_c_visual = function (self)
-		return { fg = self.Normal.fg, bg = self.StatusLine.bg, bold = true }
+		return { fg = self.Normal.fg, bg = self.StatusLine.bg }
 	end,
 	lualine_a_insert = function (self)
 		return { fg = self.StatusLine.bg, bg = ice, bold = true }
 	end,
 	lualine_b_insert = function (self)
-		return { fg = ice, bg = self.StatusLine.bg, bold = true }
+		return { fg = ice, bg = self.StatusLine.bg }
 	end,
 	lualine_c_insert = function (self)
-		return { fg = self.Normal.fg, bg = self.StatusLine.bg, bold = true }
+		return { fg = self.Normal.fg, bg = self.StatusLine.bg }
 	end,
 	lualine_a_replace = function (self)
 		return { fg = self.StatusLine.bg, bg = red, bold = true }
 	end,
 	lualine_b_replace = function (self)
-		return { fg = red, bg = self.StatusLine.bg, bold = true }
+		return { fg = red, bg = self.StatusLine.bg }
 	end,
 	lualine_c_replace = function (self)
-		return { fg = self.Normal.fg, bg = self.StatusLine.bg, bold = true }
+		return { fg = self.Normal.fg, bg = self.StatusLine.bg }
 	end,
 	lualine_a_command = function (self)
 		return { fg = self.StatusLine.bg, bg = yellow, bold = true }
 	end,
 	lualine_b_command = function (self)
-		return { fg = yellow, bg = self.StatusLine.bg, bold = true }
+		return { fg = yellow, bg = self.StatusLine.bg }
 	end,
 	lualine_c_command = function (self)
-		return { fg = self.Normal.fg, bg = self.StatusLine.bg, bold = true }
+		return { fg = self.Normal.fg, bg = self.StatusLine.bg }
 	end,
 	lualine_a_terminal = function (self)
 		return { fg = self.StatusLine.bg, bg = orange, bold = true }
 	end,
 	lualine_b_terminal = function (self)
-		return { fg = orange, bg = self.StatusLine.bg, bold = true }
+		return { fg = orange, bg = self.StatusLine.bg }
 	end,
 	lualine_c_terminal = function (self)
-		return { fg = self.Normal.fg, bg = self.StatusLine.bg, bold = true }
+		return { fg = self.Normal.fg, bg = self.StatusLine.bg }
 	end,
 	lualine_a_inactive = function (self)
 		return { fg = self.StatusLine.bg, bg = self.Comment.fg, bold = true }
 	end,
 	lualine_b_inactive = function (self)
-		return { fg = self.Comment.fg, bg = self.StatusLine.bg, bold = true }
+		return { fg = self.Comment.fg, bg = self.StatusLine.bg }
 	end,
 	lualine_c_inactive = function (self)
-		return { fg = self.Normal.fg, bg = self.StatusLine.bg, bold = true }
+		return { fg = self.Normal.fg, bg = self.StatusLine.bg }
 	end,
 
 }
