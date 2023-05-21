@@ -286,7 +286,7 @@ colorscheme.highlight_all({
 	Statement = { fg = ice },
 	StorageClass = { fg = orange_light, bold = true },
 	Structure = { fg = blue, bold = true },
-	Tag = "Underlined",
+	Tag = "Keyword",
 	Type = { fg = cyan },
 	Typedef = { fg = cyan, italic = true },
 
@@ -325,9 +325,13 @@ colorscheme.highlight_all({
 	["@namespace"] = "Directory",
 	["@string.escape"] = "@string.special",
 	["@tag"] = "Tag",
+	["@tag.delimiter"] = "Comment",
+	["@tag.attribute"] = "Label",
 	["@text.danger"] = "ErrorMsg",
 	["@text.literal"] = "mkdCode",
-	["@text.uri"] = "Underlined",
+	["@text.uri"] = function(self)
+		return { fg = self.String.fg, underline = true }
+	end,
 	["@text.warning"] = "WarningMsg",
 	["@variable"] = "Normal",
 	["@field"] = "Normal",
