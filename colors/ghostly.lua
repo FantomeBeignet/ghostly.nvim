@@ -1365,6 +1365,10 @@ colorscheme.highlight_all({
 	end,
 	ScrollbarMisc = "ScrollbarCursor",
 	ScrollbarMiscHandle = "ScrollbarCursorHandle",
+
+	-- Lazygit.nvim
+	LazyGitFloat = { bg = bg_dark },
+	LazyGitBorder = { bg = bg_dark },
 })
 
 --[[ Step 5: Terminal Colors
