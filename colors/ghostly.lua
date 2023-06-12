@@ -464,7 +464,7 @@ colorscheme.highlight_all({
 	CursorColumn = { bg = gray_dark },
 
 	-- Codelens
-	LspCodeLens = { fg = gray, italic = true },
+	LspCodeLens = { fg = gray_light, italic = true },
 
 	-- Misc
 	Directory = { fg = ice, bold = true },
