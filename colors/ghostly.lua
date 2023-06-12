@@ -463,6 +463,9 @@ colorscheme.highlight_all({
 	CursorIM = "Cursor",
 	CursorColumn = { bg = gray_dark },
 
+	-- Codelens
+	LspCodeLens = { fg = gray, italic = true },
+
 	-- Misc
 	Directory = { fg = ice, bold = true },
 	VertSplit = { fg = bg_light },
