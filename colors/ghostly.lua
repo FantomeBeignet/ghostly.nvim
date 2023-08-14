@@ -343,9 +343,7 @@ colorscheme.highlight_all({
 
 	-- Status Line
 	StatusLine = { bg = bg_light },
-	StatusLineNC = function(self)
-		return { fg = gray, bg = self.StatusLine.bg }
-	end,
+	StatusLineNC = { fg = gray, bg = bg },
 	StatusLineTerm = function(self)
 		return { fg = orange, bg = self.StatusLine.bg }
 	end,
@@ -1372,6 +1370,31 @@ colorscheme.highlight_all({
 	-- Lazygit.nvim
 	LazyGitFloat = { bg = bg_dark },
 	LazyGitBorder = { bg = bg_dark },
+
+	-- Searchbox.nvim
+	SearchBoxMatch = { bg = magenta, fg = bg },
+
+	-- nvim-notify
+	NotifyERRORBorder = { fg = red },
+	NotifyWARNBorder = { fg = orange_light },
+	NotifyINFOBorder = { fg = green_light },
+	NotifyDEBUGBorder = { fg = magenta },
+	NotifyTRACEBorder = { fg = ice },
+	NotifyERRORIcon = { fg = red },
+	NotifyWARNIcon = { fg = orange_light },
+	NotifyINFOIcon = { fg = green_light },
+	NotifyDEBUGIcon = { fg = magenta },
+	NotifyTRACEIcon = { fg = ice },
+	NotifyERRORTitle = { fg = red },
+	NotifyWARNTitle = { fg = orange_light },
+	NotifyINFOTitle = { fg = green_light },
+	NotifyDEBUGTitle = { fg = magenta },
+	NotifyTRACETitle = { fg = ice },
+	NotifyERRORBody = "Normal",
+	NotifyWARNBody = "Normal",
+	NotifyINFOBody = "Normal",
+	NotifyDEBUGBody = "Normal",
+	NotifyTRACEBody = "Normal",
 })
 
 --[[ Step 5: Terminal Colors
