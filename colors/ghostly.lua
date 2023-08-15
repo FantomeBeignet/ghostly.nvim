@@ -121,6 +121,12 @@ local pink_light = { "#ddbbc6", 217, "white" } --- @type ghostly.color.definitio
 local purple = { "#b678c4", 171, "magenta" } --- @type ghostly.color.definition
 local purple_light = { "#c28ecd", 133, "darkmagenta" } --- @type ghostly.color.definition
 
+local red_bg = { "#503b4e", 239, "darkred" }
+local orange_bg = { "#56464c", 239, "darkorange" }
+local magenta_bg = { "#473e59", 239, "darkmagenta" }
+local ice_bg = { "#41475f", 239, "darkice" }
+local teal_bg = { "#3f4d55", 239, "darkteal" }
+
 --[[ Step 4: highlights
 You can define highlight groups like this:
 
@@ -429,31 +435,51 @@ colorscheme.highlight_all({
 	Todo = { fg = black, bg = blue, bold = true },
 	WarningMsg = { fg = orange, bold = true },
 	Hint = { fg = magenta, italic = true },
-	Info = { fg = blue, italic = true },
+	Info = { fg = ice, italic = true },
 
 	-- Diagnostics
 	debugBreakpoint = "ErrorMsg",
 	debugPC = "ColorColumn",
 
+	DiagnosticOk = { fg = teal },
+	DiagnosticFloatingOk = "DiagnosticError",
+	DiagnosticSignOk = "DiagnosticFloatingError",
+	DiagnosticVirtualTextOk = function(self)
+		return { fg = self.DiagnosticOk.fg, bg = teal_bg }
+	end,
+
 	DiagnosticError = "ErrorMsg",
-	DiagnosticFloatingError = "ErrorMsg",
+	DiagnosticFloatingError = "DiagnosticError",
 	DiagnosticSignError = "DiagnosticFloatingError",
+	DiagnosticVirtualTextError = function(self)
+		return { fg = self.DiagnosticError.fg, bg = red_bg }
+	end,
 
 	DiagnosticWarn = "WarningMsg",
-	DiagnosticFloatingWarn = "WarningMsg",
+	DiagnosticFloatingWarn = "DiagnosticWarn",
 	DiagnosticSignWarn = "DiagnosticFloatingWarn",
+	DiagnosticVirtualTextWarn = function(self)
+		return { fg = self.DiagnosticWarn.fg, bg = orange_bg }
+	end,
 
 	DiagnosticHint = "Hint",
-	DiagnosticFloatingHint = "Hint",
+	DiagnosticFloatingHint = "DiagnosticHint",
 	DiagnosticSignHint = "DiagnosticFloatingHint",
+	DiagnosticVirtualTextHint = function(self)
+		return { fg = self.DiagnosticHint.fg, bg = magenta_bg }
+	end,
 
 	DiagnosticInfo = "Info",
-	DiagnosticFloatingInfo = "Info",
+	DiagnosticFloatingInfo = "DiagnosticInfo",
 	DiagnosticSignInfo = "DiagnosticFloatingInfo",
+	DiagnosticVirtualTextInfo = function(self)
+		return { fg = self.DiagnosticInfo.fg, bg = ice_bg }
+	end,
 
+	DiagnosticUnderlineOk = { sp = teal, undercurl = true },
 	DiagnosticUnderlineError = { sp = red, undercurl = true },
 	DiagnosticUnderlineHint = { sp = magenta, undercurl = true },
-	DiagnosticUnderlineInfo = { sp = blue, undercurl = true },
+	DiagnosticUnderlineInfo = { sp = ice, undercurl = true },
 	DiagnosticUnderlineWarn = { sp = orange, undercurl = true },
 
 	-- Cursor
