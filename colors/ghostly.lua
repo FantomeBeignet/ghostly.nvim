@@ -100,7 +100,7 @@ local red_dark = { "#cc7588", 124, "darkred" } --- @type ghostly.color.definitio
 local red_light = { "#d897a5", 205, "red" } --- @type ghostly.color.definition
 
 local orange = { "#e5aa8a", 208, "darkyellow" } --- @type ghostly.color.definition
-local orange_light = { "#09b69b", 214, "darkyellow" } --- @type ghostly.color.definition
+local orange_light = { "#f2b798", 214, "darkyellow" } --- @type ghostly.color.definition
 
 local yellow = { "#dacd8b", 227, "yellow" } --- @type ghostly.color.definition
 
